@@ -95,7 +95,6 @@
       }
       #search > button:hover {
         border-style: double;
-        cursor: pointer;
       }
       #search > div > p {
         font-size: small;
@@ -117,9 +116,6 @@
       #post > div > span:first-child {
         color: #2557a7;
         font-weight: bold;
-      }
-      #post > div > span:first-child:hover{
-        cursor: pointer;
       }
       #post > div:first-child {
         margin-bottom: 15px;
@@ -174,136 +170,12 @@
         font-weight: bold;
         cursor: pointer;
       }
-      #mainCont {
-        margin-top: 20px;
-        display: flex;
-        margin: auto;
-        width: 80%;
-        justify-content: center;
-        
+       
+      #mainData{
+        height: 400px;
+      }
+       
 
-        /* border: 1px solid; */
-      }
-     
-      #mainCont > div {
-        /* border: 1px solid; */
-        /* height: 400px; */
-        margin-left: 20px;
-        width: 45%;
-      }
-      #mainCont > #firstdiv > div {
-        /* display: flex; */
-        /* display: flex;
-       flex-direction: column; */
-        /* border: 1px solid; */
-        border-radius: 10px;
-        padding: 20px;
-        margin-bottom: 10px;
-        border: 1px solid transparent;
-        align-items: flex-start;
-        /* height: 400px; */
-        width: 400px;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-      }
-      #mainCont > #firstdiv > div p {
-        margin: 2px auto 0px auto;
-        color: #2d2d2d;
-        font-size: 14px;
-      }
-      #mainCont > #firstdiv > div:hover {
-        border: 1px solid #2557a7;
-        cursor: pointer;
-      }
-      #mainCont > #firstdiv > div > ul > li {
-        text-align: justify;
-        margin-left: -30px;
-        margin-top: -10px;
-        padding-left: 0em;
-        color:gray;
-      }
-      #mainCont > #firstdiv {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-      }
-      #mainCont > #firstdiv > div > p:nth-child(4) {
-        width: 80px;
-        padding: 2px;
-        margin-left: 0px;
-        border-radius: 5px;
-        background-color: silver;
-      }
-      #mainCont > #firstdiv > div > p:nth-child(5) {
-        width: 185px;
-        padding: 2px;
-        margin-left: 0px;
-        border-radius: 5px;
-        background-color: silver;
-      }
-      #mainCont > #secdiv > div {
-        /* display: flex; */
-        /* display: flex;
-       flex-direction: column; */
-        /* border: 1px solid; */
-        border-radius: 10px;
-          border: 1px solid transparent;
-        padding: 20px;
-        margin-bottom: 10px;
-        align-items: flex-start;
-        /* height: 400px; */
-        width: 400px;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-      }
-      #mainCont > #secdiv > div p {
-        margin: 2px auto 0px auto;
-        color: #2d2d2d;
-        font-size: 14px;
-      }
-      #mainCont > #secdiv > div:hover {
-        border: 1px solid #2557a7;
-        
-      }
-      #mainCont > #secdiv > div > ul > li {
-        text-align: justify;
-        margin-left: -30px;
-        margin-top: -10px;
-        padding-left: 0em;
-        color: gray;
-      }
-      #mainCont > #secdiv {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-      
-      }
-      #mainCont > #secdiv > div > p:nth-child(4) {
-        width: 80px;
-        padding: 2px;
-        margin-left: 0px;
-        border-radius: 5px;
-        background-color: silver;
-      }
-      #mainCont > #secdiv > div > p:nth-child(5) {
-        width: 185px;
-        padding: 2px;
-        margin-left: 0px;
-        border-radius: 5px;
-        background-color: silver;
-      }
-      #mainCont > #secdiv > div > div > button {
-        border-radius: 5px;
-        border: none;
-        margin-top: 5px;
-        margin-right: 10px;
-        margin-bottom: -5px;
-        background-color: #2557a7;
-        color: white;
-        padding: 10px;
-      }
-      #mainCont > #secdiv > div > div > button:hover {
-        cursor: pointer;
-         background-color: #16376d
-      }
       footer{
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
       }
@@ -336,6 +208,38 @@
          cursor: pointer;
          background-color: #16376d;
       }
+      #mainData{
+        width: 500px;
+        background-color: rgb(237, 243, 239);
+        margin: auto;
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid transparent;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      }
+      #heading{
+        display: flex;
+        width: 500px;
+        padding: 20px;
+        margin: auto;
+        justify-content: space-between;
+      }
+      #mainData:hover{
+        border: 1px solid #2557a7;
+      }
+      #heading>button{
+        background-color: #2557a7;
+        border: none;
+        border-radius: 5px;
+        padding:7px;
+        color: white;
+        margin-bottom: 15px;
+        margin-top: 10px;
+      }
+      #mainData>div{
+        margin: 20px;
+        font-weight: bold;
+      }
 
       @media only screen and (min-width: 421px) and (max-width: 720px) {
         #search {
@@ -367,7 +271,7 @@
         <div class="nav">
           <div>
             <ul>
-              <li><a href="">Find Jobs</a></li>
+              <li><a href="index.html">Find Jobs</a></li>
               <li><a href="">Company reviews</a></li>
               <li><a href="">Salary Guide</a></li>
             </ul>
@@ -376,7 +280,6 @@
             <ul>
               <li><a href="">Post Your resume</a></li>
               <li><a href="">Sign in</a></li>
-              <li>|</li>
               <li><a href="">Employers/Post job</a></li>
             </ul>
           </div>
@@ -425,13 +328,17 @@
       </div>
       <div id="recent">Recent searches</div>
     </div>
-    <div id="mainCont">
-      <div id="firstdiv"></div>
-      <div id="secdiv"></div>
+    <div id="heading"><h3>Recent Search</h3>
+        <button>Edit</button>
+    </div>
+    <div id="mainData">
+        
+
     </div>
    
+    <hr>
     <footer>
-       <p>Indeed हिंदी में भी ऑफ़र करता है</p> 
+        <p>Indeed हिंदी में भी ऑफ़र करता है</p> 
        <hr>
         <ul>
             <li><a href="">Career Advice</a></li>
@@ -471,7 +378,7 @@ Help Center
       companyName: "Vintage Coffee and Beverages Ltd",
       place: "Telangana",
       salaray: "240000",
-      jobType: ["Full-time", "Part-time","Regular"],
+      jobType: ["Full-time", "Part-time"],
       Shift: "Day shift",
       Quali: "Bachelor's (Required)",
       jobDetais:
@@ -672,194 +579,51 @@ Help Center
     },
   ];
   document.getElementById("feed").addEventListener("click", function () {
-    // showData(jobData);
-    console.log("kashi");
-    location = "index.html";
+    
+    location = "homePage.html";
   });
-  showData(jobData);
-  document.querySelector("button").addEventListener("click", findData);
+
+  document.getElementById("find").addEventListener("click", findData);
   var output1 = document.getElementById("jobtitle").value;
   var output2 = document.getElementById("place").value;
-
+  var allData=JSON.parse(localStorage.getItem("search"))||[];
   function findData() {
-    var output1 = document.getElementById("jobtitle").value;
-    var output2 = document.getElementById("place").value;
-    if (output1 == "" && output2 == "") {
-      alert("Enter something");
-    } else {
-      document.getElementById("firstdiv").innerText = "";
-
-      var ans = jobData.filter(function (elm, i) {
-        return (
-          output1 == elm.post ||
-          output1 == elm.companyName ||
-          output2 == elm.place
-        );
-      });
-      showData(ans);
-      localStorage.setItem("searchItem", JSON.stringify(output1));
-      localStorage.setItem("searchItem2", JSON.stringify(output2));
-    }
-  }
-   document.getElementById("find").addEventListener("click", findData2);
-  var output1 = document.getElementById("jobtitle").value;
-  var output2 = document.getElementById("place").value;
-  var allData1=JSON.parse(localStorage.getItem("search"))||[];
-  function findData2() {
-    //  document.getElementById("mainData").innerText="";
+     document.getElementById("mainData").innerText="";
     var output1 = document.getElementById("jobtitle").value;
     var output2 = document.getElementById("place").value;
     if (output1 == "" && output2 == "") {
       alert("Enter something");
     } else {
     //   document.getElementById("firstdiv").innerText = "";
-     allData1.push(output1);
-     allData1.push(output2);
-      localStorage.setItem("search", JSON.stringify(allData1));
-       
+     allData.push(output1);
+     allData.push(output2);
+    //   localStorage.setItem("search", JSON.stringify(allData));
+       showData(allData);
   }
 }
-
-  function showData(jobData) {
-    jobData.map(function (elm, i) {
-    jobData[i].index=i;
-      var div = document.createElement("div");
-      div.addEventListener("click", function () {
-        //
-        setData(elm, i);
-      });
-
-      var name = document.createElement("h2");
-      name.innerText = elm.post;
-
-      var companyname = document.createElement("p");
-      companyname.innerText = elm.companyName;
-      companyname.style.color="blue";
-
-      var place = document.createElement("p");
-      place.innerText = elm.place;
-
-      var salaray = document.createElement("p");
-      salaray.innerText = elm.salaray + " " + "LPA";
-
-      var jobType = document.createElement("p");
-      jobType.innerText =
-        elm.jobType[0] + "," + elm.jobType[1] + "," + elm.jobType[2];
-    var quli=document.createElement("p");
-    quli.innerText=elm.Quali;
-
-      var p1 = document.createElement("p");
-      p1.innerText = "Apply securely with Indeed Resume";
-
-      var p2 = document.createElement("p");
-      p2.innerText = "Urgently hiring";
-
-      var detail = document.createElement("ul");
-      var li = document.createElement("li");
-      li.innerText = elm.jobDetais;
-
-      var rating = document.createElement("p");
-
-      rating.innerText = "Rating" + " " + elm.rating;
-      //   console.log(li.innerText);
-
-      detail.append(li);
-      div.append(
-        name,
-        companyname,
-        place,
-        salaray,
-        jobType,
-        quli,
-        p1,
-        p2,
-        detail,
-        rating
-      );
-      document.getElementById("firstdiv").append(div);
-     
-      
-    });
-  }
-
-  var elem = JSON.parse(localStorage.getItem("getData")) || [];
-
-  setData(elem,elem.index);
-  console.log(elem.index);
-  function setData(elm, i) {
-    document.getElementById("secdiv").innerText="";
-    jobData[i].index=i;
-    console.log(jobData[i].index);
-    elm=jobData[i]
-    console.log(typeof elm);
-    
-    
-
-    var div = document.createElement("div");
-    div.setAttribute("id", "sideData");
-
-    var name = document.createElement("h2");
-    name.innerText = elm.post;
-
-    var companyname = document.createElement("p");
-    companyname.innerText = elm.companyName;
-    companyname.style.color="blue";
-
-    var place = document.createElement("p");
-    place.innerText = elm.place;
-
-    var salaray = document.createElement("p");
-    salaray.innerText = elm.salaray + " " + "LPA";
-
-    var jobType = document.createElement("p");
-    jobType.innerText =
-      elm.jobType[0] + "," + elm.jobType[1] + "," + elm.jobType[2];
-  var quli=document.createElement("p");
-    quli.innerText=elm.Quali;
-    var p1 = document.createElement("p");
-    p1.innerText = "Apply securely with Indeed Resume";
-
-    var p2 = document.createElement("p");
-    p2.innerText = "Urgently hiring";
-    var div2 = document.createElement("div");
-    var button = document.createElement("button");
-    button.innerText = "Apply Now";
-    var button2 = document.createElement("button");
-    button2.innerText = "Wishlist";
-
-    var detail = document.createElement("ul");
-    var li = document.createElement("li");
-    li.innerText = elm.jobDetais;
-
-    var rating = document.createElement("p");
-
-    rating.innerText = "Rating" + " " + elm.rating;
-    console.log(li.innerText);
-    div2.append(button, button2);
-    detail.append(li);
-    div.append(
-      name,
-      companyname,
-      place,
-      salaray,
-      jobType,
-      quli,
-      p1,
-      p2,
-      div2,
-      detail,
-      rating
-    );
-    document.getElementById("secdiv").append(div);
-     localStorage.setItem("getData", JSON.stringify(elm));
-     
-    
-  
  
-}
- document.getElementById("recent").addEventListener("click", function () {
+  function showData(allData){
+    allData.map(function(elm,i){
+        var div=document.createElement("div");
 
-    location = "recent.html";
-  });
+        var div1=document.createElement("div");
+        div1.innerText=allData[i];
+
+        div.append(div1);
+
+        document.getElementById("mainData").append(div)
+        
+    });
+
+
+  }
+  
+    showData(allData);
+
+
+
+   
+ 
+
    
 </script>

@@ -375,7 +375,7 @@
           <div>
             <ul>
               <li><a href="">Post Your resume</a></li>
-              <li><a href="">Sign in</a></li>
+              <li><a href="">Sign out</a></li>
               <li>|</li>
               <li><a href="">Employers/Post job</a></li>
             </ul>
@@ -673,8 +673,8 @@ Help Center
   ];
   document.getElementById("feed").addEventListener("click", function () {
     // showData(jobData);
-    console.log("kashi");
-    location = "index.html";
+    // console.log("kashi");
+    location = "homePage.html";
   });
   showData(jobData);
   document.querySelector("button").addEventListener("click", findData);
@@ -780,18 +780,19 @@ Help Center
      
       
     });
+     
   }
 
   var elem = JSON.parse(localStorage.getItem("getData")) || [];
 
   setData(elem,elem.index);
-  console.log(elem.index);
+//   console.log(elem.index);
   function setData(elm, i) {
     document.getElementById("secdiv").innerText="";
     jobData[i].index=i;
     console.log(jobData[i].index);
     elm=jobData[i]
-    console.log(typeof elm);
+    // console.log(typeof elm);
     
     
 
@@ -800,6 +801,7 @@ Help Center
 
     var name = document.createElement("h2");
     name.innerText = elm.post;
+
 
     var companyname = document.createElement("p");
     companyname.innerText = elm.companyName;
@@ -824,6 +826,11 @@ Help Center
     var div2 = document.createElement("div");
     var button = document.createElement("button");
     button.innerText = "Apply Now";
+    // button.setAttribute("id","apply");
+    button.addEventListener("click",function(){
+          sendData(elm,i);
+           
+    });
     var button2 = document.createElement("button");
     button2.innerText = "Wishlist";
 
@@ -834,7 +841,7 @@ Help Center
     var rating = document.createElement("p");
 
     rating.innerText = "Rating" + " " + elm.rating;
-    console.log(li.innerText);
+    // console.log(li.innerText);
     div2.append(button, button2);
     detail.append(li);
     div.append(
@@ -853,13 +860,29 @@ Help Center
     document.getElementById("secdiv").append(div);
      localStorage.setItem("getData", JSON.stringify(elm));
      
-    
+ 
   
  
 }
  document.getElementById("recent").addEventListener("click", function () {
 
-    location = "recent.html";
+    location = "recntHome.html";
   });
+   var arrData=JSON.parse(localStorage.getItem("applyed"))|| [];
+  function sendData(elm,i){
+   var ans = arrData.findIndex(function (ele) {
+      return ele.companyName === jobData[i].companyName;
+    });
+    if (ans === -1) {
+    
+      arrData.push(jobData[i]);
+       
+    }
+//    console.log(arrData);
    
+    
+      localStorage.setItem("applyed",JSON.stringify(arrData));
+  }
+
+ 
 </script>
