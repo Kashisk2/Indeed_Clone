@@ -168,14 +168,15 @@
         margin-top: 20px;
         display: flex;
         margin: auto;
-        width: 90%;
+        width: 80%;
+        justify-content: center;
 
         /* border: 1px solid; */
       }
       #mainCont > div {
         /* border: 1px solid; */
         /* height: 400px; */
-        margin: 20px;
+        margin-left: 20px;
         width: 45%;
       }
       #mainCont > #firstdiv > div {
@@ -285,6 +286,32 @@
       }
       #mainCont > #secdiv > div > div > button:hover {
         cursor: pointer;
+         background-color: #16376d
+      }
+      footer{
+        /* width: 80%; */
+      }
+      footer>ul{
+        display: flex;
+        list-style: none;
+        /* width: 80%; */
+      }
+      #lastline{
+        text-align: center;
+      }
+      #lastline>button{
+          border-radius: 5px;
+        border: none;
+        margin-top: 5px;
+        margin-right: 10px;
+        margin-bottom: -5px;
+        background-color: #2557a7;
+        color: white;
+        padding: 10px;
+      }
+      #lastline>button:hover{
+         cursor: pointer;
+         background-color: #16376d;
       }
 
       @media only screen and (min-width: 421px) and (max-width: 720px) {
@@ -377,6 +404,36 @@
     <div id="mainCont">
       <div id="firstdiv"></div>
       <div id="secdiv"></div>
+    </div>
+    <hr>
+    <footer>
+        <ul>
+            <li><a href="">Career Advice</a></li>
+            <li><a href="">Browse Jobs</a></li>
+            <li><a href="">
+Browse Companies </a></li>
+            <li><a href="">Salaries</a></li>
+            <li><a href="">Indeed Events</a></li>
+            <li><a href="">Work at Indeed</a></li>
+            <li><a href="">Countries</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">
+Help Center
+</a></li>
+        </ul>
+        <ul>
+           <li>© 2022 Indeed</li> 
+           <li><a href="">Accessibility at Indeed</a></li> 
+    
+           <li><a href="">Privacy Center</a></li> 
+           <li><a href="">Cookies</a></li> 
+           <li><a href="">Privacy</a></li> 
+        </ul>
+
+    </footer>
+    <div id="lastline">
+        <h3>Let Employers Find You</h3>
+        <button>Upload Your Resume</button>
     </div>
     
   </body>
