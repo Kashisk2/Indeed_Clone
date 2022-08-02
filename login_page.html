@@ -4,102 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <style>
-    body{
-        background-color: #f3f2f1;
-    }
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="login.js">
+    <script src="https://kit.fontawesome.com/1b4e28b560.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="login.css">
+    <title>Sign In | Indeed Accounts</title>
     
-    form{
-        width:33%;
-        margin: auto;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-        padding: 10px 0;
-        background-color: white;
-    }
-    input{
-        width:90%;
-        height: 40px;
-        margin-left: 4%;
-        margin-bottom: 20px;
-        margin-top: 15px;
-        border-radius: 5px;
-    }
-    input,label{
-        font-size: 1.3rem;
-    }
-    input:hover{
-        border-color: blue;
-        background-color: aliceblue;
-    }
-    input:focus {
-        outline: none;
-        border: 2px solid blue;
-    }
-    label,p{
-        margin-left: 4%;
-    }
-    #indeed-logo{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 80px;
-        margin-bottom: 30px;
-    }
-    #login{
-        display: block;
-        width: 33%;
-        height: 30px;
-        background-color:blue;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        margin: auto;
-    }
-    #login:hover{
-        color: white;
-        background-color: rgb(148, 149, 248);
-        border: 3px solid #1e0fe4;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    #signup{
-        color: black;
-        background-color: white;
-        border: 2px solid black;
-        border-radius: 5px;
-    }
-    #signup:hover{
-        color: white;
-        background-color: rgb(148, 149, 248);
-        border: 2px solid #1e0fe4;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    h1{
-        text-align: center;
-        color: blue;
-        font-size: 40px;
-        letter-spacing: 1rem;
-    }
-    </style>
 </head>
 <body>
-    <div id="indeed-logo">
-        <a href="">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHcAAAAfCAMAAADqQKKPAAAAflBMVEX///8hZPIAWPEKXPIbYfIAVvGetPbk6vsAWvJIevIAVPEQXvLp7vokZ++QqvUAUvFojvO9zPjy9f3d5fqDofTV3/qvwffJ1flNfPA3cPFDdvEAS/G3yPeIpPSUrfV3mPOluvZWgvJwlPQARfC4v8vFy9TDzd/h5Oheh/PX3ORXxpKXAAAECUlEQVRIib2Xa5uiOgyA6U0qlVsREARF1tlx//8fPEnagnrc4555np18mKEhydumaYpRFMQ2c5emfVZF3yqjOort7dblx/kbqTU7Fi092Yl334YdfvTxOhrPfxVmrx9XS0/lcXx4s3vj2Mb/bfBbqVoAXj9+fl5p9GPzf5ytUXn7JeyQK2mjj+v18wOHMiPtnifdn8Q7aSZvX+J2kukG1mt/4XqzAykPgjGZl++9R8Pk4UtcxpjYRJ/XX7i/NqFNHhRomUz/PtdLdqJ/e4Ncpu13cZnHOy5/z91/mSvvuLU/QnVOecaAu9qpqrq+97JVFf+La+u6fuqsO1DFT5pq98zNgkmWGykEjMo8SW1kzyJRKinC63Kbw9Ds7T136sCGJ+K8nvhTmiiuEjkuiTsx8My7JorMHXftGO18y9AYqp03lXZ5N8qtuUikG+tq2d+KaadkJpl8DCGCSrmjsWOCxpIfHtY7Rc+SgtHMpBEC0VISFp2l0ACSW+m4FYc4hmuO7xKK1yZYOl5FZ9IySbPVgpk+veM+7kTpuGCs5qaZNVY4zKzEeKYf2uGgMZDcgh0+JOMOLlCcXw55sVgjfAObtOGoguwX+I7PbTvBCh7qOYidpjE9ei7j1LlO2EsuUdTjygpXBjgX5G7EEqXSzgzPok9vC+3AnKMYJww9KnL794q7Owojtef61xYhqfOW3m7r15vKtcsgEFbHHZ7kgmY0OeOvt51+zaW9CVxfjTjHNGrQOzi0mrgxLii70+myBa5ovAp9VHWT+NerzuYtNyykJ24GMXg4y1YQdwCUmWInRBwmzHzpVQP5uHl7KfVLrlq5MnxybMkP08iXAnT7ixCoZieYQV5uDFWzEyryOvU1SFKrd+tduIeFqxeui7UhrlhEMdfi71RJH8k/5JqXXMrzi/Wa8ybIBPWPZmb0Y5A22AYuf8vtH7jI0OGTYOfqym3pQwQye2jp5G/CoBFv8/zIxQSZ+c4buDu1nhCQ6lQ7szVuDZ/iowmtAOQmf1tXr9eL6WK5Pw7S5w5fheMGbUIcLR7ptXqbXAiaSgjWqtfn954b9uTiIp2oPeO84z5wMUy4lxrIVW6jCXPv85IpajV4kMwFp1fSRfNmf5+4ER4UpvriwKUJNYp3hemGqiovgddhZ+jLuho6LMUTXqp0F92KjtPF9KI/574ZpnK915GLHyS1omVCa+fn5R5EnBRK4W0oKJkWcVIrhbchp4aeJcx7qiF9xcXJCjSdBdN7rxu508EPGYwujdpjUoUrqEy72xZI4Ro/J14lhPtuizYJZUjANl0Me/HBGh9YgRthC7n+NJvlzddOc0vZdsRTvF908BsSLtWumNavsngqOsb6uVlUcdaz9DYRQYb5/QM1ZTsux4L4ZgAAAABJRU5ErkJggg==" alt="logo">
-        </a>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Indeed_logo.svg/2560px-Indeed_logo.svg.png" alt="logo">
+<form> 
+    <div id = "container">
+        <h2>Ready to take the next step ?</h2>
+        <p>Create an account or Sign in.</p>
+        <a href="#" class="fa fa-google"></a>
+        <button><a href="https://myaccount.google.com/?utm_source=sign_in_no_continue&pli=1">CONTINUE WITH GOOGLE</a></button><br>
+        <i class="fa-brands fa-apple"></i>
+        <button><a href="https://appleid.apple.com/sign-in">CONTINUE WITH APPLE</a></button><br>
+        <a href="#" class="fa fa-facebook"></a>
+        <button><a href="https://www.facebook.com/login.php?skip_api_login=1&api_key=115882278440564&kid_directed_site=0&app_id=115882278440564&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fclient_id%3D115882278440564%26redirect_uri%3Dhttps%253A%252F%252Fsecure.indeed.com%252Faccount%252Ffbauth%26scope%3Demail%26locale%3Den_IN%26display%3Dpopup%26state%3DXYeKr111GgQmstHmwvKcV62Wx3dQQejs%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D04fbbff4-8997-4218-afea-8a075e0957f7%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fsecure.indeed.com%2Faccount%2Ffbauth%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3DXYeKr111GgQmstHmwvKcV62Wx3dQQejs%23_%3D_&display=popup&locale=en_GB&pl_dbl=0">CONTINUE WITH FACEBOOK</a></button><br>
+        <hr>
+        <p>Or</p>
+        <label for="">Email Adress *</label><br>
+        <input id = "email" type= "email" placeholder="Enter Your Email"/> <br>
+        <label for="">Password</label><br>
+        <input id = "Password" type= "password" placeholder="Enter Your Password"/> <br>
+
+        <div class="TandC">
+            <p>
+                By creating an account or logging in, you understand and agree to Indeed's <a href="https://in.indeed.com/legal?hl=en_IN&_ga=2.34208548.447569749.1659348912-1408839683.1659348912#tos">terms.</a>
+                <a href=""></a>
+                You also acknowledge our <a href="https://in.indeed.com/legal?hl=en_IN&_ga=2.196890793.447569749.1659348912-1408839683.1659348912#cookies">Cookie</a> and <a href="https://hrtechprivacy.com/brands/indeed#privacypolicy">Privacy policies.</a> You will receive marketing 
+                messages from Indeed and may opt out at any time by following the unsubscribe link in
+                our messages, or as detailed in our terms.
+            </p>
+            <button id = "signIn">SIGN IN</button>
+            <p>Don't have an account? <a href="signup.html">SIGN UP NOW</a></p>
+        </div>
     </div>
-    <h1>LOGIN</h1>
-    <div id="contaier">
-            <form>
-                <label for="">Email Address *</label><br>
-                <input type="email" placeholder="Enter email"><br>
-                <label for="">Password</label><br>
-                <input type="password" placeholder="Password"><br>
-                <button id="login">Login</button>
-                <p>If you dont have account? Click on  <a href="signup.html" target="_blank"><button id="signup">Sign Up</button></a></p>
-            </form>
-    </div>
+    
+</form>
+<p id = "footer">© 2022 Indeed</p>
 </body>
 </html>
+<script src="login.js"></script>
