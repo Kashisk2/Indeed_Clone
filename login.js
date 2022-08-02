@@ -15,6 +15,7 @@ function logIn() {
     }
     if(ans == true) {
         alert("login sccessfull !");
+        location="homePage.html";
     } else {
         alert("Wrong Credentials");
     }
