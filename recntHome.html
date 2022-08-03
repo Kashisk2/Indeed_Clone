@@ -70,7 +70,7 @@
          border-radius: 5px;
       }
       hr {
-        margin-top: 20px;
+        margin-top: 18px;
         background-color: #949494;
       }
       #search {
@@ -272,6 +272,47 @@
         border:1px solid #2557a7;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     }
+    .dropbtn {
+  background-color:transparent;
+  color:black;
+  padding:0px;
+  /* font-size: 16px; */
+  border: none;
+  cursor: pointer;
+}
+
+ 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+
+}
+.dropdown a:hover {
+    background-color: #ddd;}
+
+.show {display: block;}
+      .material-symbols-outlined:hover{
+        cursor: pointer;
+
+      }
+
 
       @media only screen and (min-width: 421px) and (max-width: 720px) {
         #search {
@@ -303,7 +344,7 @@
         <div class="nav">
           <div>
             <ul>
-              <li><a href="index.html">Find Jobs</a></li>
+              <li><a href="homePage.html">Find Jobs</a></li>
               <li><a href="">Company reviews</a></li>
               <li><a href="">Salary Guide</a></li>
             </ul>
@@ -311,12 +352,21 @@
           <div>
             <ul>
                <li>
-                <span class="material-symbols-outlined"> mode_comment </span>
+                <span class="material-symbols-outlined" onclick="location.href='message.html'"> mode_comment </span>
               </li>
               <li>
-                <span class="material-symbols-outlined"> notifications </span>
+                <span class="material-symbols-outlined" onclick="location.href='notifi.html'"> notifications </span>
               </li>
-              <li><span class="material-symbols-outlined"> person </span></li>
+              <li>
+                <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn material-symbols-outlined">person</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="myjob.html">My Jobs</a>
+    <a href="index.html">Sign Out</a>
+    
+  </div>
+</div>
+                 </li>
               <li class="li">|</li>
               <li class="employ"><a href="">Employers/Post job</a></li>
             </ul>
@@ -639,6 +689,23 @@ Help Center
     
     location = "homePage.html";
   });
+   function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
 
   document.getElementById("find").addEventListener("click", findData);
   var output1 = document.getElementById("jobtitle").value;

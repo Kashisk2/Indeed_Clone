@@ -80,7 +80,7 @@
       }
       
       hr {
-        margin-top: 20px;
+        margin-top: 18px;
         background-color: #949494;
       }
       #search {
@@ -103,7 +103,7 @@
         border-color: blue;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
       }
-      #search > button {
+      #find {
         border: none;
         background-color: #2557a7;
         height: 40px;
@@ -426,6 +426,43 @@
           
        
       }
+       .dropbtn {
+  background-color:transparent;
+  color:black;
+  padding:0px;
+  /* font-size: 16px; */
+  border: none;
+  cursor: pointer;
+}
+
+ 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+
+}
+.dropdown a:hover {
+    background-color: #ddd;}
+
+.show {display: block;}
+      
 
       @media only screen and (min-width: 421px) and (max-width: 720px) {
         #search {
@@ -472,10 +509,19 @@
               <li>
                 <span class="material-symbols-outlined" onclick="location.href='notifi.html'"> notifications </span>
               </li>
-              <li><span class="material-symbols-outlined"> person </span></li>
+             <li>
+                <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn material-symbols-outlined">person</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="myjob.html">My Jobs</a>
+    <a href="index.html">Sign Out</a>
+    
+  </div>
+</div>
+                 </li>
               <li class="li">|</li>
               <li class="employ"><a href="">Employers/Post job</a></li>
-              <li><a href="myjob.html">JobList</a></li>
+            
             </ul>
           </div>
         </div>
@@ -509,8 +555,8 @@
     <div id="sort">
       <select name="" id="salarysort" onchange="salarysort()">
         <option value="">Sort By Salary</option>
-        <option value="High">High</option>
-        <option value="Low">Low</option>
+        <option value="High">High to Low</option>
+        <option value="Low">Low to High</option>
       </select>
 
       <select name="" id="rolesort" onchange="rolesort()">
@@ -521,8 +567,8 @@
 
       <select name="" id="ratingsort" onchange="ratingsort()">
         <option value="">Sort By Rating</option>
-        <option value="Assending">Assending order</option>
-        <option value="Desending">Desending order</option>
+        <option value="Assending">High to Low</option>
+        <option value="Desending">Low to High</option>
       </select>
     </div>
 
@@ -786,6 +832,27 @@
     },
   ];
  
+  window.addEventListener("load",function(){
+    showData(jobData);
+  });
+   function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
   document.getElementById("feed").addEventListener("click", function () {
     // showData(jobData);
     // console.log("kashi");
@@ -806,14 +873,14 @@
       // console.log(temp);
       showData(jobData);
     }
-    else if(selected =="High") {
-      jobData.sort(function (a, b) {
+ if(selected =="High") {
+    jobData.sort(function (a, b) {
         if (a.salaray > b.salaray) return -1;
         if (a.salaray < b.salaray) return 1;
         return 0;
       });
       showData(jobData);
-      console.log(jobData);
+      // console.log(jobData);
     }
   }
    
@@ -842,10 +909,36 @@
     }
     
 }
+ function ratingsort() {
+    console.log(jobData[0].salaray);
+    
+    var selected = document.getElementById("ratingsort").value;
+ 
+    if (selected === "Assending") {
+      jobData.sort(function (a, b) {
+        if (a.rating > b.rating) return -1;
+        if (a.rating < b.rating) return 1;
+        return 0;
+      });
+      showData(jobData);
+    }
+    if (selected === "Desending") {
+      jobData.sort(function (a, b) {
+        if (a.rating > b.rating) return 1;
+        if (a.rating< b.rating) return -1;
+        return 0;
+      });
+       
+   showData(jobData);
+   
+    }
+    
+}
  
   
- showData(jobData);
+//  showData(jobData);
    function showData(job) {
+    document.getElementById("firstdiv").innerText="";
     job.map(function (elm, i) {
       //   jobData[i].index = i;
       var div = document.createElement("div");
@@ -906,7 +999,7 @@
   }
 //   
   
-  document.querySelector("button").addEventListener("click", findData);
+  document.getElementById("find").addEventListener("click", findData);
   var output1 = document.getElementById("jobtitle").value;
   var output2 = document.getElementById("place").value;
 
