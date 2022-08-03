@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the best companies to work for | Indeed.com</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="reviews.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>Find great places to work</h1>
+            <h3>Get access to millions of company reviews</h3>
+            <label for="">Company name or job title</label><br>
+            <input id="find-company" >
+            <img id="search-icon" src="reviews_page_all_image/search.png" alt="search-icon">
+            <button id="find-btn" onclick="findcompany()">Find Companies</button>
+            <p><a href="">Do you want to search for salaries?</a></p>
+        </header>
+        <div id="display-search"></div>
+        <h2>Popular companies</h2>
+        <div id="companies-box">
+        </div>
+        <h2>Compare working at</h2>
+        <div id="compare-box-main">
+            <div class="separator">
+                <div class="company-box">
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/64x64/bcaa55ffe2abf43dd5af968419da22b9" alt="logo">
+                        </div>
+                        <div class="rating-box">
+                            <h5 class="name">Deutsche Bank</h5>
+                            <div class="rating">
+                                <h5 class="outcome">3.8</h5>
+                                <img src="reviews_page_all_image/star.png" alt="star">
+                                <h6>3.1K reviews</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <h5>VS</h5>
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/64x64/7b9cdd7bc283efa5c6031775dd62b1eb" alt="logo">
+                        </div>
+                        <div class="rating-box">
+                            <h5 class="name">Citi</h5>
+                            <div class="rating">
+                                <h5 class="outcome">3.9</h5>
+                                <img src="reviews_page_all_image/star.png" alt="star">
+                                <h6>18.7K reviews</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="separator">
+                <div class="company-box">
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/64x64/e8ac3849c7ac343c0b4495df46906cd2" alt="logo">
+                        </div>
+                        <div class="rating-box">
+                            <h5 class="name">Honeywell</h5>
+                            <div class="rating">
+                                <h5 class="outcome">3.7</h5>
+                                <img src="reviews_page_all_image/star.png" alt="star">
+                                <h6>9.7K reviews</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <h5>VS</h5>
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/64x64/d4f923a4b165338b3921e91ccf0970fa" alt="logo">
+                        </div>
+                        <div class="rating-box">
+                            <h5 class="name">Boeing</h5>
+                            <div class="rating">
+                                <h5 class="outcome">3.9</h5>
+                                <img src="reviews_page_all_image/star.png" alt="star">
+                                <h6>8.7K reviews</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="separator">
+                <div class="company-box">
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/64x64/5ee1795144e601f25421062863c89e3b" alt="logo">
+                        </div>
+                        <div class="rating-box">
+                            <h5 class="name">Hinduja Global Solutions</h5>
+                            <div class="rating">
+                                <h5 class="outcome">3.8</h5>
+                                <img src="reviews_page_all_image/star.png" alt="star">
+                                <h6>5.2K reviews</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <h5>VS</h5>
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/64x64/cd79521a26d1745f4ad62ba31c9c4021" alt="logo">
+                        </div>
+                        <div class="rating-box">
+                            <h5 class="name">Firstsource Solutions</h5>
+                            <div class="rating">
+                                <h5 class="outcome">3.3</h5>
+                                <img src="reviews_page_all_image/star.png" alt="star">
+                                <h6>2.5K reviews</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="separator">
+                <div class="company-box">
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/64x64/88813b3f866a5b58c9685073e3b87e05" alt="logo">
+                        </div>
+                        <div class="rating-box">
+                            <h5 class="name">Microsoft</h5>
+                            <div class="rating">
+                                <h5 class="outcome">4.2</h5>
+                                <img src="reviews_page_all_image/star.png" alt="star">
+                                <h6>7.5K reviews</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <h5>VS</h5>
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/64x64/b115ad2d1d5eccc79a997036e162aa93" alt="logo">
+                        </div>
+                        <div class="rating-box">
+                            <h5 class="name">Google</h5>
+                            <div class="rating">
+                                <h5 class="outcome">4.3</h5>
+                                <img src="reviews_page_all_image/star.png" alt="star">
+                                <h6>4.2K reviews</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="rating-box">
+            <div id="rating-separator">
+                <div class="write-img">
+                    <img src="reviews_page_all_image/writing-image.png" alt="write">
+                </div>
+                <h3>Rate Your Recent Company:</h3>
+                <div class="star-rating">
+                    <img class="star1" src="reviews_page_all_image/empty-star.png" onmouseover="this.src ='reviews_page_all_image/star.png'" alt="star1">
+                    <img class="star2" src="reviews_page_all_image/empty-star.png" onmouseover="this.src ='reviews_page_all_image/star.png'" alt="star2">
+                    <img class="star3" src="reviews_page_all_image/empty-star.png" onmouseover="this.src ='reviews_page_all_image/star.png'" alt="star3">
+                    <img class="star4" src="reviews_page_all_image/empty-star.png" onmouseover="this.src ='reviews_page_all_image/star.png'" alt="star4">
+                    <img class="star5" src="reviews_page_all_image/empty-star.png" onmouseover="this.src ='reviews_page_all_image/star.png'" alt="star15">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="reviews.js"></script>
