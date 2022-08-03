@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
     <title>Home Page</title>
     <style>
       * {
@@ -59,6 +63,11 @@
       ul > li > a {
         color: black;
         text-decoration: none;
+      }
+       #header ul>li:hover{
+        border-bottom:3px solid #2557a7;
+         background-color: rgb(246, 246, 246);
+         border-radius: 5px;
       }
       hr {
         margin-top: 20px;
@@ -240,6 +249,29 @@
         margin: 20px;
         font-weight: bold;
       }
+      .li,.employ{
+        margin-top:5px ;
+        margin-left: -10px;
+      }
+       #sort{
+        display: flex;
+        justify-content: space-around;
+        width: 40%;
+        margin:-30px auto 50px auto;
+        /* margin-bottom: 30px; */
+        /* margin-top: -20px; */
+      }#sort>select{
+        border-radius: 5px;
+        padding: 10px;
+        border: none;
+        border: 1px solid transparent;
+        /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      }
+    #sort>select:hover{
+        border:1px solid #2557a7;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
 
       @media only screen and (min-width: 421px) and (max-width: 720px) {
         #search {
@@ -278,9 +310,15 @@
           </div>
           <div>
             <ul>
-              <li><a href="">Post Your resume</a></li>
-              <li><a href="">Sign in</a></li>
-              <li><a href="">Employers/Post job</a></li>
+               <li>
+                <span class="material-symbols-outlined"> mode_comment </span>
+              </li>
+              <li>
+                <span class="material-symbols-outlined"> notifications </span>
+              </li>
+              <li><span class="material-symbols-outlined"> person </span></li>
+              <li class="li">|</li>
+              <li class="employ"><a href="">Employers/Post job</a></li>
             </ul>
           </div>
         </div>
@@ -309,6 +347,25 @@
 
       <button id="find">Find Jobs</button>
       <!--  -->
+    </div>
+    <div id="sort">
+        <select name="" id="salarysort" onchange="salarysort()">
+            <option value="">Sort By Salary</option>
+            <option value="High">High to Low</option>
+            <option value="Low">Low to High</option>
+        </select>
+
+        <select name="" id="rolesort" onchange="rolesort()">
+            <option value="">Sort By Role</option>
+            <option value="Assending">Assending order</option>
+            <option value="Desending">Desending order</option>
+        </select>
+
+        <select name="" id="ratingsort" onchange="ratingsort()">
+            <option value="">Sort By Rating</option>
+            <option value="Assending">Assending order</option>
+            <option value="Desending">Desending order</option>
+        </select>
     </div>
     <div id="post">
       <div>

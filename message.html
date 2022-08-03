@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
+
+    <title>Message file </title>
+    <style>
+    #container {
+      display: flex;
+      justify-content: space-around;
+      width: 90%;
+      margin:30px auto;
+      row-gap: 10px;
+         
+    }
+    body{
+   
+    }
+
+    #container>div{
+      width: 35%;
+      color: black;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      border: 1px solid transparent;
+    
+    }
+    #container>div:hover{
+        border: 1px solid blue;
+    }
+       
+  #container>div:last-child{
+      width: 60%;
+      color: red;
+      background-color: white;
+      border-radius: 10px;
+      text-align: center;
+      margin-bottom:10px ;
+      
+
+  }
+  #container #inbox{
+    color: black;
+    width:95% ;
+    height: 40px;
+    font-size: 1.25rem;
+    border-radius: 10px;
+    margin: auto;
+    display: block;
+    
+    
+  }
+  #container>div>h3{
+    font-size: 1.70rem;
+    margin-left: 10px;
+  }
+  #avatar{
+    height: 300px;
+    width: 50%; 
+    margin:30px auto;
+    
+  }
+  h1{
+    color: black;
+    text-align: center;
+    font-size: 30px;
+
+  }
+  p{
+    color: black;
+    line-height: 20px;
+    width: 45%;
+    margin: auto;
+    text-align: center;
+    font-size:18px;
+  }
+.ramesh{
+  height: 45px;
+  width: 50%;
+  margin-top: 20px;
+  margin-block: 5px;
+  color:blue;
+  background-color: rgba(128, 128, 128, 0.103) ;
+  border-radius: 10px;
+ font-size: 20px;
+ border: none;
+  
+}
+.ramesh:hover{
+   background-color: #2557a7;
+     color: white ;
+}
+.suresh{
+  height: 45px;
+  width: 50%;
+  margin-top: 20px;
+  margin-block: 5px;
+   margin-bottom: 20px;
+  color:blue;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(128, 128, 128, 0.103) ;
+  
+}
+.suresh:hover{
+     background-color: #2557a7;
+     color: white ;
+}
+* {
+        font-family: Noto Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+      }
+      #header {
+        display: flex;
+        width: 95%;
+        height: 50px;
+        background-color: white;
+        padding-bottom: 10px;
+        /* border: 1px solid; */
+        /* position: fixed; */
+
+        margin: auto;
+        align-content: center;
+      }
+      #header > div {
+        display: flex;
+        justify-content: space-around;
+      }
+      #header > div:first-child {
+        width: 15%;
+        margin: auto;
+      }
+
+      img {
+        height: 50px;
+        margin-top: 5px;
+        /* width: 10%; */
+      }
+      #header > .nav {
+        /* height: 200px; */
+        width: 90%;
+        /* height: 20px; */
+        display: flex;
+
+        justify-content: space-between;
+        margin: auto;
+        align-content: center;
+      }
+      #header ul {
+        padding-left: 0px;
+
+        text-align: center;
+        display: flex;
+        list-style: none;
+      }
+      ul > li {
+        font-size: small;
+        padding: 10px 20px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      #header ul>li:hover{
+        border-bottom:3px solid #2557a7;
+         background-color: rgb(246, 246, 246);
+         border-radius: 5px;
+      }
+
+      ul > li > a {
+        color: black;
+        text-decoration: none;
+      }
+       hr {
+        margin-top: 20px;
+        background-color: #949494;
+      }
+      .li,
+      .employ {
+        margin-top: 5px;
+        margin-left: -10px;
+      }
+      .material-symbols-outlined:hover{
+        cursor: pointer;
+      }
+      footer {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+      footer > p {
+        text-align: center;
+        font-size: 14px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+      }
+      footer > ul {
+        display: flex;
+        list-style: none;
+        /* width: 80%; */
+        padding-bottom: 10px;
+      }
+      #lastline {
+        text-align: center;
+      }
+      #lastline > button {
+        border-radius: 5px;
+        border: none;
+        margin-top: 5px;
+        margin-right: 10px;
+        margin-bottom: -5px;
+        background-color: #2557a7;
+        color: white;
+        padding: 10px;
+      }
+      #lastline > button:hover {
+        cursor: pointer;
+        background-color: #16376d;
+      }
+
+    </style>
+</head>
+<body>
+     <header>
+      <div id="header">
+        <div>
+          <img
+            src="data:image/png;base64,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"
+            alt="1"
+          />
+          <img
+            src="https://d3fw5vlhllyvee.cloudfront.net/dist/header/ukraine_support.7ad2b5d444bc427dbc5d.png"
+            alt=""
+          />
+        </div>
+        <div class="nav">
+          <div>
+            <ul>
+              <li><a href="homePage.html">Find Jobs</a></li>
+              <li><a href="">Company reviews</a></li>
+              <li><a href="">Salary Guide</a></li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li>
+                <span class="material-symbols-outlined" onclick="location.href='message.html'"> mode_comment </span>
+              </li>
+              <li>
+                <span class="material-symbols-outlined" onclick="location.href='notifi.html'"> notifications </span>
+              </li>
+              <li><span class="material-symbols-outlined"> person </span></li>
+              <li class="li">|</li>
+              <li class="employ"><a href="">Employers/Post job</a></li>
+              <li><a href="myjob.html">JobList</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <hr>
+    <div id="container">
+     <div>
+      <h3>Messages</h3>
+      <select id="inbox">
+        <option value="">Inbox</option>
+        <option value="Archeive">Archeive</option>
+        <option value="Spam">Spam</option>
+
+      </select>
+      <hr />
+     </div>
+     <div>
+      <img id="avatar";
+       src="https://img.freepik.com/premium-photo/3d-rendering-3d-illustration-chat-bubble-icon-isolated-white-background-minimal-pink-blue-chat-typing-design-element-social-media-messages-comment_640106-48.jpg?w=740"/>
+       <h1 >Welcome to Messages</h1>
+       <p>When an employer contacts you,you will see messages here.</p>
+       <button class="ramesh" onclick="location.href='homePage.html'">Find jobs</button>
+       <br/>
+       <button class="suresh">Upload your resume</button>
+     </div>
+    </div>
+      <footer>
+      <p>Indeed हिंदी में भी ऑफ़र करता है</p>
+      <hr />
+      <ul>
+        <li><a href="">Career Advice</a></li>
+        <li><a href="">Browse Jobs</a></li>
+        <li><a href=""> Browse Companies </a></li>
+        <li><a href="">Salaries</a></li>
+        <li><a href="">Indeed Events</a></li>
+        <li><a href="">Work at Indeed</a></li>
+        <li><a href="">Countries</a></li>
+        <li><a href="">About</a></li>
+        <li><a href=""> Help Center </a></li>
+      </ul>
+      <ul>
+        <li>© 2022 Indeed</li>
+        <li><a href="">Accessibility at Indeed</a></li>
+
+        <li><a href="">Privacy Center</a></li>
+        <li><a href="">Cookies</a></li>
+        <li><a href="">Privacy</a></li>
+      </ul>
+    </footer>
+    <div id="lastline">
+      <h3>Let Employers Find You</h3>
+      <button>Upload Your Resume</button>
+    </div>
+</body>
+</html>
