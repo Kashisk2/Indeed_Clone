@@ -132,7 +132,9 @@ function findcompany(){
         box.append(separator,link_separator);
         box.style.width = "300px";
         box.style.marginBottom = "30px";
-        document.getElementById("display-search").append(box);
+        var h2 = document.createElement("h2");
+        h2.innerText = "Searched Company";
+        document.getElementById("display-search").append(h2,box);
     }
     else{
         alert("Company Not Found\nCheck company name")
