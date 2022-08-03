@@ -66,6 +66,11 @@
         color: black;
         text-decoration: none;
       }
+      #header ul>li:hover{
+        border-bottom:3px solid #2557a7;
+         background-color: rgb(246, 246, 246);
+         border-radius: 5px;
+      }
       hr {
         margin-top: 20px;
         background-color: #949494;
@@ -128,19 +133,40 @@
         color: gray;
       }
        
-      #firstdiv > div > p:nth-child(4) {
-        width: 80px;
+       #firstdiv > div > p:nth-child(4) {
+        width: 100px;
         padding: 2px;
         margin-left: 0px;
         border-radius: 5px;
         background-color: silver;
       }
-     #firstdiv > div > p:nth-child(5) {
-        width: 185px;
+       #firstdiv > div > p:nth-child(5) {
+        width: 190px;
         padding: 2px;
         margin-left: 0px;
         border-radius: 5px;
         background-color: silver;
+      }
+      #firstdiv > div > p:nth-child(3)::before{
+      content: "📌";
+       }
+       #firstdiv > div > p:nth-child(4)::before{
+      content: "💸";
+       }
+    #firstdiv > div > p:nth-child(6)::before{
+      content: "✒️";
+       }
+    #firstdiv > div > p:nth-child(7)::before{
+      content: "📃";
+       }
+    #firstdiv > div > p:nth-child(8)::before{
+      content: "✔️";
+       }
+ #firstdiv > div > p:nth-child(5)::before{
+      content: "⏳";
+       }
+      #delete>p::before{
+        content: "⭐";
       }
        footer {
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -210,6 +236,62 @@
         margin-left: 5px;
         padding: 3px;
       }
+      .dropbtn {
+  background-color:transparent;
+  color:black;
+  padding:0px;
+  /* font-size: 16px; */
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  /* background-color: #2980B9; */
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+
+}
+#img{
+  box-shadow: #2557a7   0px 5px 15px;
+     width:40%;
+    height:250px;
+    /* textAlign="center"; */
+         /* img.style.borderRadius="10px"; */
+     border-radius: 10px;   
+}
+#butt{
+  background-color: #2557a7;
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+}
+ 
+
+.dropdown a:hover {
+    background-color: #ddd;}
+
+.show {display: block;}
       
 
       
@@ -257,12 +339,21 @@
           <div>
             <ul>
               <li>
-                <span class="material-symbols-outlined"> mode_comment </span>
+                <span class="material-symbols-outlined" onclick="location.href='message.html'"> mode_comment </span>
               </li>
               <li>
-                <span class="material-symbols-outlined"> notifications </span>
+                <span class="material-symbols-outlined" onclick="location.href='notifi.html'"> notifications </span>
               </li>
-              <li><span class="material-symbols-outlined"> person </span></li>
+              <li>
+                <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn material-symbols-outlined">person</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+                 </li>
               <li class="li">|</li>
               <li class="employ"><a href="">Employers/Post job</a></li>
             </ul>
@@ -522,7 +613,23 @@
       rating: "3.8",
     },
   ];
-  
+  function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
 var ans=JSON.parse(localStorage.getItem("applyed"))||[];
 console.log(ans);
 showData(ans);
@@ -532,8 +639,32 @@ function showData(ans) {
      document.getElementById("firstdiv").innerText="";
      document.getElementById("count").innerText=ans.length;
      if(ans.length==0){
-          document.getElementById("firstdiv").innerText="Find Job ";
-        
+        //   document.getElementById("firstdiv").innerText="Find Job ";
+        var div=document.createElement("div");
+         div.setAttribute("id","innerdiv");
+          var img=document.createElement("img");
+          img.setAttribute("src","https://cdn.pixabay.com/photo/2018/07/15/15/12/observe-3539810__340.jpg")
+          img.setAttribute("id","img");
+          var h3=document.createElement(h3);
+          h3.innerText="No jobs apply  yet";
+          
+           
+
+          var button=document.createElement("button");
+          button.innerText="Find Job 👉";
+          button.addEventListener("click",function(){
+            location="homePage.html";
+          });
+
+          // div.append(img,button);
+      
+         button.setAttribute("id","butt");
+
+          document.getElementById("firstdiv").style.display="flex";
+          document.getElementById("firstdiv").style.alignItems="center";
+           document.getElementById("firstdiv").style.flexDirection="column";
+
+          document.getElementById("firstdiv").append(img,h3,button);
     }
    
     ans.map(function (elm, i) {
@@ -579,6 +710,7 @@ function showData(ans) {
       button.innerText="remove";
       button.addEventListener("click",function(){
         remove(i);
+        
       })
      div2.append(rating,button);
       detail.append(li);

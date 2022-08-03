@@ -56,6 +56,11 @@
         padding: 10px 20px;
         font-family: Arial, Helvetica, sans-serif;
       }
+       #header ul>li:hover{
+        border-bottom:3px solid #2557a7;
+         background-color: rgb(246, 246, 246);
+         border-radius: 5px;
+      }
 
       ul > li > a {
         color: black;
@@ -228,19 +233,40 @@
         align-items: flex-end;
       }
       #mainCont > #firstdiv > div > p:nth-child(4) {
-        width: 80px;
+        width: 100px;
         padding: 2px;
         margin-left: 0px;
         border-radius: 5px;
         background-color: silver;
       }
       #mainCont > #firstdiv > div > p:nth-child(5) {
-        width: 185px;
+        width: 190px;
         padding: 2px;
         margin-left: 0px;
         border-radius: 5px;
         background-color: silver;
       }
+      #mainCont > #firstdiv > div > p:nth-child(3)::before{
+      content: "📌";
+       }
+       #mainCont > #firstdiv > div > p:nth-child(4)::before{
+      content: "💸";
+       }
+       #mainCont > #firstdiv > div > p:nth-child(6)::before{
+      content: "✒️";
+       }
+       #mainCont > #firstdiv > div > p:nth-child(7)::before{
+      content: "📃";
+       }
+        #mainCont > #firstdiv > div > p:nth-child(8)::before{
+      content: "✔️";
+       }
+        #mainCont > #firstdiv > div > p:nth-child(5)::before{
+      content: "⏳";
+       }
+       #mainCont > #firstdiv > div > p:nth-child(10)::before{
+      content: "⭐";
+       }
       #mainCont > #secdiv > div {
         /* display: flex; */
         /* display: flex;
@@ -278,19 +304,44 @@
       
       }
       #mainCont > #secdiv > div > p:nth-child(4) {
-        width: 80px;
+        width: 100px;
         padding: 2px;
         margin-left: 0px;
         border-radius: 5px;
         background-color: silver;
       }
       #mainCont > #secdiv > div > p:nth-child(5) {
-        width: 185px;
+        width: 190px;
         padding: 2px;
         margin-left: 0px;
         border-radius: 5px;
         background-color: silver;
       }
+           #mainCont > #secdiv > div > div > button:hover {
+        cursor: pointer;
+        background-color: #16376d;
+      }
+       #mainCont > #secdiv > div > p:nth-child(3)::before{
+      content: "📌";
+       }
+       #mainCont > #secdiv > div > p:nth-child(4)::before{
+      content: "💸";
+       }
+       #mainCont > #secdiv > div > p:nth-child(6)::before{
+      content: "✒️";
+       }
+       #mainCont > #secdiv > div > p:nth-child(7)::before{
+      content: "📃";
+       }
+        #mainCont > #secdiv > div > p:nth-child(8)::before{
+      content: "✔️";
+       }
+        #mainCont > #secdiv > div > p:nth-child(5)::before{
+      content: "⏳";
+       }
+       #mainCont > #secdiv > div > p:nth-child(11)::before{
+      content: "⭐";
+       }
       #mainCont > #secdiv > div > div > button {
         border-radius: 5px;
         border: none;
@@ -378,7 +429,7 @@
           <div>
             <ul>
               <li><a href="">Post Your resume</a></li>
-              <li><a href="signup.html">Sign in</a></li>
+              <li><a href="login.html">Sign in</a></li>
               <li>|</li>
               <li><a href="">Employers/Post job</a></li>
             </ul>
@@ -827,8 +878,17 @@ Help Center
     var div2 = document.createElement("div");
     var button = document.createElement("button");
     button.innerText = "Apply Now";
+     button.addEventListener("click", function () {
+      location="login.html";
+      
+    });
     var button2 = document.createElement("button");
     button2.innerText = "Wishlist";
+     button2.addEventListener("click", function () {
+       location="login.html"
+      
+    });
+    
 
     var detail = document.createElement("ul");
     var li = document.createElement("li");

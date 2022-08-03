@@ -61,6 +61,11 @@
         padding: 10px 20px;
         font-family: Arial, Helvetica, sans-serif;
       }
+       #header ul>li:hover{
+        border-bottom:3px solid #2557a7;
+         background-color: rgb(246, 246, 246);
+         border-radius: 5px;
+      }
 
       ul > li > a {
         color: black;
@@ -129,19 +134,41 @@
       }
        
       #firstdiv > div > p:nth-child(4) {
-        width: 80px;
+        width: 100px;
         padding: 2px;
         margin-left: 0px;
         border-radius: 5px;
         background-color: silver;
       }
-     #firstdiv > div > p:nth-child(5) {
-        width: 185px;
+       #firstdiv > div > p:nth-child(5) {
+        width: 190px;
         padding: 2px;
         margin-left: 0px;
         border-radius: 5px;
         background-color: silver;
       }
+      #firstdiv > div > p:nth-child(3)::before{
+      content: "📌";
+       }
+       #firstdiv > div > p:nth-child(4)::before{
+      content: "💸";
+       }
+    #firstdiv > div > p:nth-child(6)::before{
+      content: "✒️";
+       }
+    #firstdiv > div > p:nth-child(7)::before{
+      content: "📃";
+       }
+    #firstdiv > div > p:nth-child(8)::before{
+      content: "✔️";
+       }
+ #firstdiv > div > p:nth-child(5)::before{
+      content: "⏳";
+       }
+      #delete>p::before{
+        content: "⭐";
+      }
+      
        footer {
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
      
@@ -210,6 +237,21 @@
         margin-left: 5px;
         padding: 3px;
       }
+      #img{
+  box-shadow: #2557a7   0px 5px 15px;
+     width:40%;
+    height:250px;
+    /* textAlign="center"; */
+         /* img.style.borderRadius="10px"; */
+     border-radius: 10px;   
+}
+#butt{
+  background-color: #2557a7;
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+}
       
 
       
@@ -532,7 +574,31 @@ function showData(ans) {
      document.getElementById("firstdiv").innerText="";
      document.getElementById("count").innerText=ans.length;
      if(ans.length==0){
-          document.getElementById("firstdiv").innerText="Find Job ";
+            var div=document.createElement("div");
+         div.setAttribute("id","innerdiv");
+          var img=document.createElement("img");
+          img.setAttribute("src","https://cdn.pixabay.com/photo/2017/02/18/02/59/application-2076445__340.png")
+          img.setAttribute("id","img");
+          var h3=document.createElement(h3);
+          h3.innerText="No jobs apply  yet";
+          
+           
+
+          var button=document.createElement("button");
+          button.innerText="Find Job 👉";
+          button.addEventListener("click",function(){
+            location="homePage.html";
+          });
+
+          // div.append(img,button);
+      
+         button.setAttribute("id","butt");
+
+          document.getElementById("firstdiv").style.display="flex";
+          document.getElementById("firstdiv").style.alignItems="center";
+           document.getElementById("firstdiv").style.flexDirection="column";
+
+          document.getElementById("firstdiv").append(img,h3,button);
         
     }
    
