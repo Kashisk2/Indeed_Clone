@@ -207,7 +207,7 @@ function changeStatusInApplied(index){
         
         appliedArr.splice(index,1);
         displayapplied();
-        localStorage.setItem("applyed",JSON.stringify(wishlistArr));
+        localStorage.setItem("applyed",JSON.stringify(appliedArr));
         document.getElementById("appliedcount").innerText=appliedArr.length;
     }
 }
