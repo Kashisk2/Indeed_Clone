@@ -8,219 +8,9 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
     />
-
+<link rel="stylesheet" href="message.css">
     <title>Message file </title>
-    <style>
-    #container {
-      display: flex;
-      justify-content: space-around;
-      width: 90%;
-      margin:30px auto;
-      row-gap: 10px;
-         
-    }
-    body{
-   
-    }
-
-    #container>div{
-      width: 35%;
-      color: black;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-      border: 1px solid transparent;
-    
-    }
-    #container>div:hover{
-        border: 1px solid blue;
-    }
-       
-  #container>div:last-child{
-      width: 60%;
-      color: red;
-      background-color: white;
-      border-radius: 10px;
-      text-align: center;
-      margin-bottom:10px ;
-      
-
-  }
-  #container #inbox{
-    color: black;
-    width:95% ;
-    height: 40px;
-    font-size: 1.25rem;
-    border-radius: 10px;
-    margin: auto;
-    display: block;
-    
-    
-  }
-  #container>div>h3{
-    font-size: 1.70rem;
-    margin-left: 10px;
-  }
-  #avatar{
-    height: 300px;
-    width: 50%; 
-    margin:30px auto;
-    
-  }
-  h1{
-    color: black;
-    text-align: center;
-    font-size: 30px;
-
-  }
-  p{
-    color: black;
-    line-height: 20px;
-    width: 45%;
-    margin: auto;
-    text-align: center;
-    font-size:18px;
-  }
-.ramesh{
-  height: 45px;
-  width: 50%;
-  margin-top: 20px;
-  margin-block: 5px;
-  color:blue;
-  background-color: rgba(128, 128, 128, 0.103) ;
-  border-radius: 10px;
- font-size: 20px;
- border: none;
-  
-}
-.ramesh:hover{
-   background-color: #2557a7;
-     color: white ;
-}
-.suresh{
-  height: 45px;
-  width: 50%;
-  margin-top: 20px;
-  margin-block: 5px;
-   margin-bottom: 20px;
-  color:blue;
-  font-size: 20px;
-  border-radius: 10px;
-  border: none;
-  background-color: rgba(128, 128, 128, 0.103) ;
-  
-}
-.suresh:hover{
-     background-color: #2557a7;
-     color: white ;
-}
-* {
-        font-family: Noto Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
-      }
-      #header {
-        display: flex;
-        width: 95%;
-        height: 50px;
-        background-color: white;
-        padding-bottom: 10px;
-        /* border: 1px solid; */
-        /* position: fixed; */
-
-        margin: auto;
-        align-content: center;
-      }
-      #header > div {
-        display: flex;
-        justify-content: space-around;
-      }
-      #header > div:first-child {
-        width: 15%;
-        margin: auto;
-      }
-
-      img {
-        height: 50px;
-        margin-top: 5px;
-        /* width: 10%; */
-      }
-      #header > .nav {
-        /* height: 200px; */
-        width: 90%;
-        /* height: 20px; */
-        display: flex;
-
-        justify-content: space-between;
-        margin: auto;
-        align-content: center;
-      }
-      #header ul {
-        padding-left: 0px;
-
-        text-align: center;
-        display: flex;
-        list-style: none;
-      }
-      ul > li {
-        font-size: small;
-        padding: 10px 20px;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      #header ul>li:hover{
-        border-bottom:3px solid #2557a7;
-         background-color: rgb(246, 246, 246);
-         border-radius: 5px;
-      }
-
-      ul > li > a {
-        color: black;
-        text-decoration: none;
-      }
-       hr {
-        margin-top: 20px;
-        background-color: #949494;
-      }
-      .li,
-      .employ {
-        margin-top: 5px;
-        margin-left: -10px;
-      }
-      .material-symbols-outlined:hover{
-        cursor: pointer;
-      }
-      footer {
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-      }
-      footer > p {
-        text-align: center;
-        font-size: 14px;
-        padding-top: 30px;
-        padding-bottom: 20px;
-      }
-      footer > ul {
-        display: flex;
-        list-style: none;
-        /* width: 80%; */
-        padding-bottom: 10px;
-      }
-      #lastline {
-        text-align: center;
-      }
-      #lastline > button {
-        border-radius: 5px;
-        border: none;
-        margin-top: 5px;
-        margin-right: 10px;
-        margin-bottom: -5px;
-        background-color: #2557a7;
-        color: white;
-        padding: 10px;
-      }
-      #lastline > button:hover {
-        cursor: pointer;
-        background-color: #16376d;
-      }
-
-    </style>
+ 
 </head>
 <body>
      <header>
@@ -239,7 +29,7 @@
           <div>
             <ul>
               <li><a href="homePage.html">Find Jobs</a></li>
-              <li><a href="">Company reviews</a></li>
+              <li><a href="reviews.html">Company reviews</a></li>
               <li><a href="">Salary Guide</a></li>
             </ul>
           </div>
@@ -251,10 +41,19 @@
               <li>
                 <span class="material-symbols-outlined" onclick="location.href='notifi.html'"> notifications </span>
               </li>
-              <li><span class="material-symbols-outlined"> person </span></li>
+             <li>
+                <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn material-symbols-outlined">person</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="wishlist.html">My Jobs</a>
+    <a href="index.html">Sign Out</a>
+    
+  </div>
+</div>
+                 </li>
               <li class="li">|</li>
               <li class="employ"><a href="">Employers/Post job</a></li>
-              <li><a href="myjob.html">JobList</a></li>
+               
             </ul>
           </div>
         </div>
@@ -311,3 +110,4 @@
     </div>
 </body>
 </html>
+ <script src="message.js"></script>

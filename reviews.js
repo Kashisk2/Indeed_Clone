@@ -74,6 +74,7 @@ function display(){
     });
 }
 function findcompany(){
+    
     var company_name ="";
     company_name += document.getElementById("find-company").value;
     var index=-1;
@@ -137,7 +138,7 @@ function findcompany(){
         box.style.marginTop ="30px";
         // var h2 = document.createElement("h2");
         // h2.innerText = "Searched Company";
-        document.getElementById("display-h2").style.display = "block";
+        // document.getElementById("display-h2").style.display ="block";
         var hr = document.createElement("hr");
         hr.style.backgroundColor= "gray";
         document.getElementById("display-search").append(box,hr);
@@ -147,3 +148,20 @@ function findcompany(){
     }
 
 }
+ function myFunction() {
+   document.getElementById("myDropdown").classList.toggle("show");
+ }
+
+ // Close the dropdown if the user clicks outside of it
+ window.onclick = function (event) {
+   if (!event.target.matches(".dropbtn")) {
+     var dropdowns = document.getElementsByClassName("dropdown-content");
+     var i;
+     for (i = 0; i < dropdowns.length; i++) {
+       var openDropdown = dropdowns[i];
+       if (openDropdown.classList.contains("show")) {
+         openDropdown.classList.remove("show");
+       }
+     }
+   }
+ };

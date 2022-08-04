@@ -8,172 +8,9 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
     />
+    <link rel="stylesheet" href="notifi.css">
     <title>Document</title>
-    <style>
-        #container{
-            display: flex;
-      justify-content: space-around;
-      width: 90%;
-      margin: auto;
-      row-gap: 10px;
-           
-        }
-   
-        #container>div{
-            /* height:600px;  */
-            width: 600px;
-           border: 1px solid transparent;
-           margin:10px auto;
-           background-color: white;
-           text-align: center;
-           border-radius: 10px;
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        }
-         #container>div:hover{
-            border: 1px solid rgb(131, 131, 210);
-         }
-#container>div>img{
-    height: 200px;
-    width: 40%; 
-   margin-top: 100px;
-   margin-bottom: 50px;
-}
-h1{
-    font-size: 30px;
-    text-align: center;
-}
-p{
-    color: black;
-    line-height: 20px;
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    font-size:18px;
-}
-.ramesh{
-  height: 45px;
-  width: 50%;
-  margin-top: 20px;
-  margin-block: 5px;
-  color: white;
-  background-color: blue;
-  border-radius: 10px;
-  font-size: 20px;
-  border: none;
-  margin-bottom: 20px;
-  
-  
-}
-.ramesh:hover{
-    border: double;
-}
-* {
-        font-family: Noto Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
-      }
-      #header {
-        display: flex;
-        width: 95%;
-        height: 50px;
-        background-color: white;
-        padding-bottom: 10px;
-        /* border: 1px solid; */
-        /* position: fixed; */
-
-        margin: auto;
-        align-content: center;
-      }
-      #header > div {
-        display: flex;
-        justify-content: space-around;
-      }
-      #header > div:first-child {
-        width: 15%;
-        margin: auto;
-      }
-
-      img {
-        height: 50px;
-        margin-top: 5px;
-        /* width: 10%; */
-      }
-      #header > .nav {
-        /* height: 200px; */
-        width: 90%;
-        /* height: 20px; */
-        display: flex;
-
-        justify-content: space-between;
-        margin: auto;
-        align-content: center;
-      }
-      #header ul {
-        padding-left: 0px;
-
-        text-align: center;
-        display: flex;
-        list-style: none;
-      }
-      ul > li {
-        font-size: small;
-        padding: 10px 20px;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-
-      ul > li > a {
-        color: black;
-        text-decoration: none;
-      }
-     #header  ul>li:hover{
-        border-bottom:3px solid #2557a7;
-         background-color: rgb(246, 246, 246);
-         border-radius: 5px;
-      }
-       hr {
-        margin-top: 20px;
-        background-color: #949494;
-      }
-      .li,
-      .employ {
-        margin-top: 5px;
-        margin-left: -10px;
-      }
-      .material-symbols-outlined:hover{
-        cursor: pointer;
-      }
-      footer {
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-      }
-      footer > p {
-        text-align: center;
-        font-size: 14px;
-        padding-top: 30px;
-        padding-bottom: 20px;
-      }
-      footer > ul {
-        display: flex;
-        list-style: none;
-        /* width: 80%; */
-        padding-bottom: 10px;
-      }
-      #lastline {
-        text-align: center;
-      }
-      #lastline > button {
-        border-radius: 5px;
-        border: none;
-        margin-top: 5px;
-        margin-right: 10px;
-        margin-bottom: -5px;
-        background-color: #2557a7;
-        color: white;
-        padding: 10px;
-      }
-      #lastline > button:hover {
-        cursor: pointer;
-        background-color: #16376d;
-      }
-
-    </style>
+ 
 </head>
 <body> 
     
@@ -193,7 +30,7 @@ p{
           <div>
             <ul>
               <li><a href="homePage.html">Find Jobs</a></li>
-              <li><a href="">Company reviews</a></li>
+              <li><a href="reviews.html">Company reviews</a></li>
               <li><a href="">Salary Guide</a></li>
             </ul>
           </div>
@@ -205,10 +42,19 @@ p{
               <li>
                 <span class="material-symbols-outlined" onclick="location.href='notifi.html'"> notifications </span>
               </li>
-              <li><span class="material-symbols-outlined"> person </span></li>
+              <li>
+                <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn material-symbols-outlined">person</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="wishlist.html">My Jobs</a>
+    <a href="index.html">Sign Out</a>
+    
+  </div>
+</div>
+                 </li>
               <li class="li">|</li>
               <li class="employ"><a href="">Employers/Post job</a></li>
-              <li><a href="myjob.html">JobList</a></li>
+               
             </ul>
           </div>
         </div>
@@ -253,3 +99,4 @@ p{
     </div>
 </body>
 </html>
+ <script src="message.js"></script>
