@@ -4,13 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <link
+    <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
     />
     <title>Home Page</title>
-   <link rel="stylesheet" href="recntHome.css">
-    
+    <link rel="stylesheet" href="recntHome.css" />
   </head>
   <body>
     <header>
@@ -35,22 +34,36 @@
           </div>
           <div>
             <ul>
-               <li>
-                <span class="material-symbols-outlined" onclick="location.href='message.html'"> mode_comment </span>
+              <li>
+                <span
+                  class="material-symbols-outlined"
+                  onclick="location.href='message.html'"
+                >
+                  mode_comment
+                </span>
               </li>
               <li>
-                <span class="material-symbols-outlined" onclick="location.href='notifi.html'"> notifications </span>
+                <span
+                  class="material-symbols-outlined"
+                  onclick="location.href='notifi.html'"
+                >
+                  notifications
+                </span>
               </li>
               <li>
                 <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn material-symbols-outlined">person</button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="myjob.html">My Jobs</a>
-    <a href="index.html">Sign Out</a>
-    
-  </div>
-</div>
-                 </li>
+                  <button
+                    onclick="myFunction()"
+                    class="dropbtn material-symbols-outlined"
+                  >
+                    person
+                  </button>
+                  <div id="myDropdown" class="dropdown-content">
+                    <a href="myjob.html">My Jobs</a>
+                    <a href="index.html">Sign Out</a>
+                  </div>
+                </div>
+              </li>
               <li class="li">|</li>
               <li class="employ"><a href="">Employers/Post job</a></li>
             </ul>
@@ -83,23 +96,23 @@
       <!--  -->
     </div>
     <div id="sort">
-        <select name="" id="salarysort" onchange="salarysort()">
-            <option value="">Sort By Salary</option>
-            <option value="High">High to Low</option>
-            <option value="Low">Low to High</option>
-        </select>
+      <select name="" id="salarysort" onchange="salarysort()">
+        <option value="">Sort By Salary</option>
+        <option value="High">High to Low</option>
+        <option value="Low">Low to High</option>
+      </select>
 
-        <select name="" id="rolesort" onchange="rolesort()">
-            <option value="">Sort By Role</option>
-            <option value="Assending">Assending order</option>
-            <option value="Desending">Desending order</option>
-        </select>
+      <select name="" id="rolesort" onchange="rolesort()">
+        <option value="">Sort By Role</option>
+        <option value="Assending">Assending order</option>
+        <option value="Desending">Desending order</option>
+      </select>
 
-        <select name="" id="ratingsort" onchange="ratingsort()">
-            <option value="">Sort By Rating</option>
-            <option value="Assending">Assending order</option>
-            <option value="Desending">Desending order</option>
-        </select>
+      <select name="" id="ratingsort" onchange="ratingsort()">
+        <option value="">Sort By Rating</option>
+        <option value="Assending">Assending order</option>
+        <option value="Desending">Desending order</option>
+      </select>
     </div>
     <div id="post">
       <div>
@@ -119,47 +132,40 @@
       </div>
       <div id="recent">Recent searches</div>
     </div>
-    <div id="heading"><h3>Recent Search</h3>
-        <button>Edit</button>
+    <div id="heading">
+      <h3>Recent Search</h3>
+      <button>Edit</button>
     </div>
-    <div id="mainData">
-        
+    <div id="mainData"></div>
 
-    </div>
-   
-    <hr>
+    <hr />
     <footer>
-        <p>Indeed हिंदी में भी ऑफ़र करता है</p> 
-       <hr>
-        <ul>
-            <li><a href="">Career Advice</a></li>
-            <li><a href="">Browse Jobs</a></li>
-            <li><a href="">
-Browse Companies </a></li>
-            <li><a href="">Salaries</a></li>
-            <li><a href="">Indeed Events</a></li>
-            <li><a href="">Work at Indeed</a></li>
-            <li><a href="">Countries</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">
-Help Center
-</a></li>
-        </ul>
-        <ul>
-           <li>© 2022 Indeed</li> 
-           <li><a href="">Accessibility at Indeed</a></li> 
-    
-           <li><a href="">Privacy Center</a></li> 
-           <li><a href="">Cookies</a></li> 
-           <li><a href="">Privacy</a></li> 
-        </ul>
+      <p>Indeed हिंदी में भी ऑफ़र करता है</p>
+      <hr />
+      <ul>
+        <li><a href="">Career Advice</a></li>
+        <li><a href="">Browse Jobs</a></li>
+        <li><a href=""> Browse Companies </a></li>
+        <li><a href="">Salaries</a></li>
+        <li><a href="">Indeed Events</a></li>
+        <li><a href="">Work at Indeed</a></li>
+        <li><a href="">Countries</a></li>
+        <li><a href="">About</a></li>
+        <li><a href=""> Help Center </a></li>
+      </ul>
+      <ul>
+        <li>© 2022 Indeed</li>
+        <li><a href="">Accessibility at Indeed</a></li>
 
+        <li><a href="">Privacy Center</a></li>
+        <li><a href="">Cookies</a></li>
+        <li><a href="">Privacy</a></li>
+      </ul>
     </footer>
     <div id="lastline">
-        <h3>Let Employers Find You</h3>
-        <button>Upload Your Resume</button>
+      <h3>Let Employers Find You</h3>
+      <button>Upload Your Resume</button>
     </div>
-    
   </body>
 </html>
- <script src="recntHome.js"></script>
+<script src="recntHome.js"></script>

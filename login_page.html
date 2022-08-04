@@ -1,50 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="login.js">
-    <script src="https://kit.fontawesome.com/1b4e28b560.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="login.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="login.js" />
+    <script
+      src="https://kit.fontawesome.com/1b4e28b560.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="login.css" />
     <title>Sign In | Indeed Accounts</title>
-    
-</head>
-<body>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Indeed_logo.svg/2560px-Indeed_logo.svg.png" alt="logo">
-<form> 
-    <div id = "container">
+  </head>
+  <body>
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Indeed_logo.svg/2560px-Indeed_logo.svg.png"
+      alt="logo"
+    />
+    <form>
+      <div id="container">
         <h2>Ready to take the next step ?</h2>
         <p>Create an account or Sign in.</p>
         <a href="#" class="fa fa-google"></a>
-        <button><a href="https://myaccount.google.com/?utm_source=sign_in_no_continue&pli=1">CONTINUE WITH GOOGLE</a></button><br>
+        <button>
+          <a
+            href="https://myaccount.google.com/?utm_source=sign_in_no_continue&pli=1"
+            >CONTINUE WITH GOOGLE</a
+          ></button
+        ><br />
         <i class="fa-brands fa-apple"></i>
-        <button><a href="https://appleid.apple.com/sign-in">CONTINUE WITH APPLE</a></button><br>
+        <button>
+          <a href="https://appleid.apple.com/sign-in"
+            >CONTINUE WITH APPLE</a
+          ></button
+        ><br />
         <a href="#" class="fa fa-facebook"></a>
-        <button><a href="https://www.facebook.com/login.php?skip_api_login=1&api_key=115882278440564&kid_directed_site=0&app_id=115882278440564&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fclient_id%3D115882278440564%26redirect_uri%3Dhttps%253A%252F%252Fsecure.indeed.com%252Faccount%252Ffbauth%26scope%3Demail%26locale%3Den_IN%26display%3Dpopup%26state%3DXYeKr111GgQmstHmwvKcV62Wx3dQQejs%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D04fbbff4-8997-4218-afea-8a075e0957f7%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fsecure.indeed.com%2Faccount%2Ffbauth%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3DXYeKr111GgQmstHmwvKcV62Wx3dQQejs%23_%3D_&display=popup&locale=en_GB&pl_dbl=0">CONTINUE WITH FACEBOOK</a></button><br>
-        <hr>
+        <button>
+          <a
+            href="https://www.facebook.com/login.php?skip_api_login=1&api_key=115882278440564&kid_directed_site=0&app_id=115882278440564&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fclient_id%3D115882278440564%26redirect_uri%3Dhttps%253A%252F%252Fsecure.indeed.com%252Faccount%252Ffbauth%26scope%3Demail%26locale%3Den_IN%26display%3Dpopup%26state%3DXYeKr111GgQmstHmwvKcV62Wx3dQQejs%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D04fbbff4-8997-4218-afea-8a075e0957f7%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fsecure.indeed.com%2Faccount%2Ffbauth%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3DXYeKr111GgQmstHmwvKcV62Wx3dQQejs%23_%3D_&display=popup&locale=en_GB&pl_dbl=0"
+            >CONTINUE WITH FACEBOOK</a
+          ></button
+        ><br />
+        <hr />
         <p>Or</p>
-        <label for="">Email Adress *</label><br>
-        <input id = "email" type= "email" placeholder="Enter Your Email"/> <br>
-        <label for="">Password</label><br>
-        <input id = "Password" type= "password" placeholder="Enter Your Password"/> <br>
+        <label for="">Email Adress *</label><br />
+        <input id="email" type="email" placeholder="Enter Your Email" /> <br />
+        <label for="">Password</label><br />
+        <input
+          id="Password"
+          type="password"
+          placeholder="Enter Your Password"
+        />
+        <br />
 
         <div class="TandC">
-            <p>
-                By creating an account or logging in, you understand and agree to Indeed's <a href="https://in.indeed.com/legal?hl=en_IN&_ga=2.34208548.447569749.1659348912-1408839683.1659348912#tos">terms.</a>
-                <a href=""></a>
-                You also acknowledge our <a href="https://in.indeed.com/legal?hl=en_IN&_ga=2.196890793.447569749.1659348912-1408839683.1659348912#cookies">Cookie</a> and <a href="https://hrtechprivacy.com/brands/indeed#privacypolicy">Privacy policies.</a> You will receive marketing 
-                messages from Indeed and may opt out at any time by following the unsubscribe link in
-                our messages, or as detailed in our terms.
-            </p>
-            <button id = "signIn">SIGN IN</button>
-            <p>Don't have an account? <a href="signup.html">SIGN UP NOW</a></p>
+          <p>
+            By creating an account or logging in, you understand and agree to
+            Indeed's
+            <a
+              href="https://in.indeed.com/legal?hl=en_IN&_ga=2.34208548.447569749.1659348912-1408839683.1659348912#tos"
+              >terms.</a
+            >
+            <a href=""></a>
+            You also acknowledge our
+            <a
+              href="https://in.indeed.com/legal?hl=en_IN&_ga=2.196890793.447569749.1659348912-1408839683.1659348912#cookies"
+              >Cookie</a
+            >
+            and
+            <a href="https://hrtechprivacy.com/brands/indeed#privacypolicy"
+              >Privacy policies.</a
+            >
+            You will receive marketing messages from Indeed and may opt out at
+            any time by following the unsubscribe link in our messages, or as
+            detailed in our terms.
+          </p>
+          <button id="signIn">SIGN IN</button>
+          <p>Don't have an account? <a href="signup.html">SIGN UP NOW</a></p>
         </div>
-    </div>
-    
-</form>
-<p id = "footer">© 2022 Indeed</p>
-</body>
+      </div>
+    </form>
+    <p id="footer">© 2022 Indeed</p>
+  </body>
 </html>
 <script src="login.js"></script>
