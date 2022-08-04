@@ -89,7 +89,7 @@
         width: 55%;
         margin: 50px auto;
         gap: 10px;
-        row-gap: -20px;
+        /* row-gap: -20px; */
       }
       #search > div {
         border: 1px solid #949494;
@@ -1018,10 +1018,16 @@ window.onclick = function(event) {
           output2 == elm.place
         );
       });
+      if(ans.length==0){
+        alert("No Match Found");
+        location="homePage.html";
+        
+      }else{
       showData(ans); 
       localStorage.setItem("searchItem", JSON.stringify(output1));
       localStorage.setItem("searchItem2", JSON.stringify(output2));
     }
+  }
   }
   document.getElementById("find").addEventListener("click", findData2);
   var output1 = document.getElementById("jobtitle").value;
