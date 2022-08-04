@@ -53,6 +53,9 @@ margin-left: -35px;
 margin-bottom: -7px;
 /* border: 1px solid yellow; */
 }
+#display-search>h2{
+    display: none;
+}
 #companies-box{
 display: grid;
 grid-template-columns: repeat(3,1fr);
@@ -66,6 +69,16 @@ align-items: center;
 #box a{
 text-decoration: none;
 color: hsl(208, 69%, 46%);
+}
+#box{
+    padding: 10px;
+    border: 1px solid rgb(243, 236, 236);
+    border-radius: 10px;
+}
+#box:hover{
+    background-color: #f5fbf9;
+    cursor: pointer;
+    border-radius: 10px;
 }
 #img-box{
 /* border: 2px solid yellow; */
@@ -129,12 +142,16 @@ padding: 20px;
 border: 1px solid rgb(243, 236, 236);
 border-radius: 10px;
 }
+.company-box:hover{
+    cursor: pointer;
+    background-color: #f5fbf9;
+}
 .box{
 /* border: 1px solid blue; */
 display: flex;
 padding: 10px;
-
 }
+
 .img-box{
 border: 1px solid rgb(231, 225, 225);
 box-shadow: 0 2px 2px rgb(231, 225, 225);
@@ -239,7 +256,7 @@ margin-top: 30px;
 padding: 20px 0;
 border-radius: 20px;
 border-color: rgb(243, 236, 236);
-background-color: #f5fbf9 ;
+background-color: #ecf8f4 ;
 }
 #rating-separator{
 width: 65%;

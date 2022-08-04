@@ -74,10 +74,12 @@ function display(){
     });
 }
 function findcompany(){
-    var company_name = document.getElementById("find-company").value;
+    var company_name ="";
+    company_name += document.getElementById("find-company").value;
     var index=-1;
     arr.forEach(function(ele,i){
-        if(ele.name==company_name){
+        var name = ele["name"];
+        if(name.toUpperCase() === company_name.toUpperCase()){
             index=i;
             return;
         }
@@ -132,9 +134,13 @@ function findcompany(){
         box.append(separator,link_separator);
         box.style.width = "300px";
         box.style.marginBottom = "30px";
-        var h2 = document.createElement("h2");
-        h2.innerText = "Searched Company";
-        document.getElementById("display-search").append(h2,box);
+        box.style.marginTop ="30px";
+        // var h2 = document.createElement("h2");
+        // h2.innerText = "Searched Company";
+        document.getElementById("display-h2").style.display = "block";
+        var hr = document.createElement("hr");
+        hr.style.backgroundColor= "gray";
+        document.getElementById("display-search").append(box,hr);
     }
     else{
         alert("Company Not Found\nCheck company name")
