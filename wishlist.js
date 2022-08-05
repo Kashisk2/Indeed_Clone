@@ -77,7 +77,8 @@ function displaywish(){
         });
 
         var btn2=document.createElement("select");
-        btn2.setAttribute("class","select");
+        btn2.setAttribute("id",`wishlist${index}`)
+        // btn2.setAttribute("class","select");
         btn2.addEventListener("change",function(){
             changeStatus(index);
         });
@@ -143,7 +144,7 @@ function applyNow(index){
 
 function changeStatus(index){
     console.log(index);
-    var selected=document.querySelector(".select").value;
+    var selected=document.querySelector(`#wishlist${index}`).value;
     console.log(selected);
     if(selected==="applied"){
         var f=0;
@@ -228,7 +229,10 @@ function displayapplied(){
         p2.innerText=ele.place;
 
         var btn2=document.createElement("select");
-        btn2.setAttribute("class","select2");
+        btn2.setAttribute("id",`applied${index}`);
+        btn2.addEventListener("change",function(){
+            changeStatusInApplied(index);
+        });
         
         var opt1=document.createElement("option");
         opt1.innerText="Update status";
@@ -265,17 +269,13 @@ function displayapplied(){
         div.append(div1,div2)
         document.getElementById("data").append(div);
 
-        btn2.addEventListener("change",function(){
-            changeStatusInApplied(index);
-        });
-
     });
 }
 }
 
 function changeStatusInApplied(index){
 
-    var selected=document.querySelector(".select2").value;
+    var selected=document.querySelector(`#applied${index}`).value;
     console.log(selected);
     if(selected==="movetowishlist"){
         var f=0;
