@@ -8,7 +8,7 @@
      height: 50px;
      /* border: 1px solid; */
      /* position: fixed; */
-
+font-weight: bold;
      margin: auto;
      align-content: center;
  }
@@ -308,7 +308,14 @@
      /* display: flex; */
      /* display: flex;
        flex-direction: column; */
-     /* border: 1px solid; */
+    position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        /* padding: 5px; */
+        /* background-color: #cae8ca; */
+        /* border: 2px solid #4CAF50; */
+        /* overflow-y: scroll; */
+        /* overflow-x: hidden; */
      border-radius: 10px;
      border: 1px solid transparent;
      padding: 20px;

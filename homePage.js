@@ -77,7 +77,7 @@ var jobData = [
   },
   {
     post: ".NET Developer",
-    companyName: "intellisourcetech",
+    companyName: "Intellisourcetech",
     place: "Pune",
     salaray: "940000",
     jobType: ["Full-time", "Part-time", "Regular"],
@@ -258,8 +258,6 @@ function salarysort() {
 }
 
 function rolesort() {
-  console.log(jobData[0].salaray);
-
   var selected = document.getElementById("rolesort").value;
 
   if (selected === "Assending") {
@@ -276,7 +274,28 @@ function rolesort() {
       if (a.post < b.post) return 1;
       // return 0;
     });
-    console.log("kashi");
+
+    showData(jobData);
+  }
+}
+function companysort() {
+  var selected = document.getElementById("companysort").value;
+
+  if (selected === "Assending") {
+    jobData.sort(function (a, b) {
+      if (a.companyName > b.companyName) return 1;
+      if (a.companyName < b.companyName) return -1;
+      return 0;
+    });
+    showData(jobData);
+  }
+  if (selected === "Desending") {
+    jobData.sort(function (a, b) {
+      if (a.companyName > b.companyName) return -1;
+      if (a.companyName < b.companyName) return 1;
+      // return 0;
+    });
+
     showData(jobData);
   }
 }

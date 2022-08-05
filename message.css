@@ -7,7 +7,7 @@
 
 }
 
-body {}
+ 
 
 #container>div {
     width: 35%;
@@ -123,7 +123,7 @@ p {
     padding-bottom: 10px;
     /* border: 1px solid; */
     /* position: fixed; */
-
+font-weight: bold;
     margin: auto;
     align-content: center;
 }

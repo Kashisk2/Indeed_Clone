@@ -191,7 +191,7 @@ function displayapplied(){
        img.setAttribute("id", "img");
        img.style.margin="20px auto"
        var h4 = document.createElement("h4");
-       h4.innerText = "No jobs apply  yet";
+       h4.innerText = "No jobs applied  yet";
        h4.setAttribute("id","h4");
 
        var button = document.createElement("button");
