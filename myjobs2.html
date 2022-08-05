@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My jobs | Indeed</title>
+    <style>
+      #container {
+        width: 70%;
+        margin: auto;
+        /* display: grid;
+            grid-template-columns: repeat(1,1fr); */
+      }
+      #headings {
+        width: 60%;
+        /* border: 4px dashed crimson; */
+        display: flex;
+        justify-content: space-between;
+      }
+      #headings > div > button:first-child {
+        border: none;
+        background-color: white;
+        font-size: 130%;
+      }
+      #archived {
+        border: none;
+        background-color: white;
+        font-size: 130%;
+      }
+      #headings > div > button:last-child {
+        border: none;
+        border-radius: 5px;
+        font-size: 130%;
+      }
+      h1 {
+        /* font-weight: ; */
+        font-size: 300%;
+      }
+      hr {
+        margin-top: 30px;
+      }
+      #data {
+        display: grid;
+        /* box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px; */
+      }
+      #data > div {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+      }
+      #data > div button {
+        margin: 40px 10px 40px 10px;
+        padding: 5px 20px;
+        font-weight: 800;
+        border: none;
+        border-radius: 10px;
+        font-size: large;
+      }
+      #data > div button:first-child {
+        background-color: rgb(54, 54, 189);
+        color: white;
+      }
+      .select {
+        padding: 5px 10px;
+        font-weight: 600;
+        /* border: none; */
+        border-radius: 10px;
+        color: rgb(54, 54, 189);
+        font-size: large;
+        width: %;
+      }
+      .select2 {
+        padding: 5px 10px;
+        font-weight: 600;
+        /* border: none; */
+        border-radius: 10px;
+        color: rgb(54, 54, 189);
+        font-size: large;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>My jobs</h1>
+      <div id="headings">
+        <div>
+          <button id="wishlist">Wishlist</button>
+          <!-- <span>0</span> -->
+          <button id="wishlistcount">0</button>
+        </div>
+        <div>
+          <button id="applied">Applied</button>
+          <button id="appliedcount">0</button>
+        </div>
+        <div>
+          <button id="interviews">Interviews</button>
+          <button id="interviewscount">0</button>
+        </div>
+        <button id="archived">Archived</button>
+      </div>
+      <hr />
+      <div id="data"></div>
+    </div>
+  </body>
+</html>
+<script src="./myjobs2.js"></script>

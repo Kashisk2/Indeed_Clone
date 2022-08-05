@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1b4e28b560.js" crossorigin="anonymous"></script>
+     <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
+    <link rel="stylesheet" href="salary.css">
+    <title>Salaries | Indeed.com</title>
+    
+</head>
+<body>
+    <header>
+      <div id="header">
+        <div>
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATcAAACiCAMAAAATIHpEAAAAllBMVEX///8AOpsALpcAOJoAMZgAJZUAKZYAJ5UAM5mPn8oAK5a7xN0ANZkAL5dbdLXU3OwAIpTCzOJwhr6lstRNa7CVpc54jcAAHpP09/vs8Pfk6fP4+v3L1OexvdpBYazd4/A4W6merdIwVadlfbmDlsasudhof7sgS6NTb7IRRKCXps5yiL62wt0lTqRZc7SFmMcAGJIKQJ9IRBGPAAAOVUlEQVR4nO1caXeysBKWhEBEUHAFxH2rWuvr//9zF5Blsqm912p7T57TLxVCwpOZyWRmQqOhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaHxbkTBods/7S/7+arZit49mj+CYLgjNjJdnMI1kWUvB/G7x/TrEa1dYmIDAruIrGbvHtivRnQkqCDNpabnedTN/8XUP47fPbjfi6bt4Zwli5jL9nG9Hq7mmOQ/YmQk7x7eL0VwcTKCTOJ2J8CgRcF676eqi0e9943tF+M4ysWKdCVy1en6Xkrc4vWj+u2IT07GmtkM5dejITGN0edrB/X7kTjUMKh9vmH84y8f29qXYzDxUx0lH3fctBb1u68Zzx9Bz0/9Dmtz975w67xgNH8GvXRFQKeH9gTaiavxmdJmt984gKA5PP/WFWc8OQ+bgexKJ6XNX796PDXinY88j9Bf6Va3HNszkS9RxjB1aUeHNwyp7B+5113wv877BqFC8u+663RNwT2bU8MXaYs7nRfFQLpeET5w56/p8DvYu8Xg0JG7crYMv8n9FqxcksLovkACxnYVfPF/Xcwl8auYEGVXxI6PLY7KeOrTaxDE9NuK3cMTh0aqeNUDjtCLMUDV4AgrQyfXnLL3BjatQ2+e8dMysLGqztAbrawc25oKqwUvDCxscAI4YoKWLv3hndWhnlLE24u346PmzYa8RRb2Wfkbu2ys16CcOD4bg9/MW1/BW9e0BuydZ8fg4P+sR/oXeYtH7pK9cezxtP20e/AXeVuZnJY2AiLwZpAfdeT+IG/xyNtyN4K3kGv20/EHeVsjIQx5NEXenB9NK/xB3pAj7OY1bwykvE1sW9gNNLWeQkh561ti8Ei2Lvh6XYC8Rf5I3ArI/JClcNcz8ed46/kryZ2i30sm4HIojZOH0X+//X+Qt3EUx9/sJWsSR/9TYF/GW38kC7CK+6x5da3TppZzYlaJcdDs703Hcuhp1bsdApj1jtM9ptTY9deftaTf563T684NZBNiW97+4xw8wF78ue5fkGWnTdBlOpzctTSdxXZ+cal7WbabQU21hLexs5M+IeH29Wb1ipsRNTB2Sb1hnXUpQRRjI/ujDlkqA0HRYEcsM52T7F7qWfa03L3d4S05XoiTlZRlN+C0LbKd/u2dXzw4Ecurm7ieRZaLG2zPhgZxrgVE2KWIoFUpURLekn+KooUWcWvaPLcSotmo+M0p9Dta+R4rnK69l2YwwqGN+NIwsmvd56215LvIVYBc1AUXszZBrtDEdZy1grn4S+iD+tOZirfDP1WAaDaXxi1XlWs3yh/6icQ1xMAjSWK6RZH48gb2v8LbvHXmvsjAta29k2dxwu6ISvrKmiAk9UMPPpXcTf2zgrevG/Gh1oeTxcnpFuxex/Ur5O93HsnHZ/X5p60Vdxqmm9ziraliLYM7kmXgAiqZy4o50hdEbty3FXdb80jKm3EzKD2eJQlrTOPas6PtRmMrcfSucLhM7Ep5ZyqdEzVvfVtBd/li4sQ3VTNUwHS5pSs8qXmm6c0ib6FSTRXo1K/vThtd1TSl8Bnjs7LUd2YldQsFb8sbknOFt+N8jKN/r4lrM/Gf8U6mo9Xg7NmXwFvnu94s5O3roJahtD8LTEnz1p0p0LwWEcjbnKUNu6aXVWozP5rsO6wJ14RmdbbceuRAievfnhuMl3XrgrfWd31zwBu+lEtE9joe/zqGWSfIkhF7KV1rnNSrcurXAW0Bb1vG/XZtsz88n7tTx2JMHoKe+4SRNuzY8+75PPwwCCNT7r4W0gGvNJnHQqx6OcZgcAVvk0dTo6XsAN7Kd8XIXqZj684dh2EOVMntuem2L8dNkAS9NnJEU1TzxnCArXmreNnx59KC7fzaSEcEXvDwohxDsmKu1FzHnDV0yek8SZLWYUokcljat8dYmxjl9qIjKJxnDoqxhQfW0XBKC3dgjZt3qTzWcOAItqXiLWQOAhDGXi4gC7guP+jDx9kraPqSC7zmlx7MBzsAa1q5NnHXF2b1G1Ghzvli+6UjK/BGVoD7GIp0tnDkGLPWxWI2xPGcj1lVvB3hFZtzpROoXaj0RgIooTbno4Q7oN5lnKLDmBDMlsgkmPeB7vOWtIKgtTl/0MyPtlW8EdZAJox1Ma8/9hhxs4ZcRx8ccSVvMRQpf8K1arRgV1YxeUu4yeGj/40I7ggKUVgx4sZ3E+054u7zth2lxtEpViIVb0LsjtGTIpUzh317YoXdnNWUkrc1MC+mJGjTBUHpwiTAacMXscknGD3NPfOQsXq2UCoQcZuv+7zBYal4E5ODn1C2SG4qYsa6YzGiE7GLQ8kbWJ8xkbiZESTpGp2AwmPLtv1QHvO44waOV5ZcD1hv8Dm88fnDdP4Y7clb9aAzYcv2JwtGkQveWlA2BJXLAMo2rtHoEPSE97ImE9BTnjBpM/ohC4F9MdrwFN7oh9gMzqiVWws4NPnbNC6Mi9AU+ifS7XsAloa8iKkFfvDOsiYhWPFppvvQcaTSIt0ZIylP4c0SjDVndTY8KWggtmhw+dqCN9AMy8vXx8CJy53sIaRa7plO62nN5nAG1YNIo1+ca/MM3mSpGkhBrgkRdBgUNYExfOqVN/iTTK4zANnOfZ4TIAXJm8BMHQkbLaC3soUkA9Ttp/AmFYMNsDE5bwlsIVfTRmMn7LPgG6kyDl3KPDkE64uqnAWSkE47KB+76q0EEZzUp/AmC7F/8pYX/iC3IFxnV5ag3FqKwYK3xpgdG1Wc6IH3pMI/BL6Oo4oe78T96Q3c582VxTxbPG8LIIDKVJV4EywZcPttKUAQBRts13gpb9IHy1bKG1yzbNUJAOamJ/BGvx7hDVoUZemuqJXMttGlUgA5yLZNjMOD5U2gC+5HcJlQ12NDB/wpvMm8KoG3M+hVpXCMEbzyNr8RHZfA7DJq+wgyEYW9yHzrHPC5z+DNlNkQgTdoQuR+GPfYK2+n27FuHtluU1bVcgPekVmRsaUKDkEj8hTe+B26lLf1I7xBP+q/4c2bN77Lm5vJ1/wdvHkP8Qb1lA8GVRDlbfm4nmLTn4bf4w2b5JI5xtC+iWVZb+UNWgdLlWIX7duUCaJYShBi74ZXMV5A3qi6iU0IXl1HAvcCvsq+NZ9s3x7jDUYclC7SRFhPYWgDNVufCrSSWSUmsCe6CpRNgk7FEPCcVTsz1iV6HW/BPYuYAU7plbf1I+rNAu7zlT2p+1UqA/T5Xscb3Ggqi/m/GOnKfoHOmPPYiS1mS/vYAWQoovIISoONmbyON5hdwCrbK+YBocXzHjtODGowDHx6qEkHrOOqSWViJq/jjfEtFbqQiPGQCNQ3SDd0EsC1hDyUqhvDULMtr49j3OkX8gYdESqU24h9FZtY6Ij4N0gYtxa9wqI3H4gF5Eh6veKFINWK4OAJruwv5I0pshYj6w0+wVDw1uQDeQoKEHGsUT/PWkCtu2HgwqXvOP4+347CsIss98HG61/K2xg+SHqucMsclyh4m4lpFwk+r6nhovoJ1gUoz0XF1/yza/K9GI5sZdgxG5cX8sY9SXThWmzKqAw2QbtoKwRuURQp4KsmNx8IQ3ac4rkkt7WMFkq0YchWiL+SNzYl7vM986nskjdGQZDUmR9WjF9TUdHtVHWGz6p24eqEM0lx7PFC2uOKwl7JGxsTwj4rOwFfGFgFN+HK4J5E2xP2q75wsXwO4dpnSWzpuS75uCZYx0yFDjbZyMOAr6V7KW9c7pZ81BHCqCtU+VW8MUUTdMlLXIBrZ7k0myHkDSM+/BLP69EVqt1oMoqIfVA43ZkKdZEv5Y2v+aGkv5mF43A2aVviCbo6mN6FLLiU0btoC4uFqroftvTLZz/INrDgtxaK8jz+qAZC21YcjqPOYkrEOszX8hbxBVHUIZZjkapwENb9gCQEU9WC7eWmkLlxsGUIB27higkmIdwsZbtzxtDdqcNt3LKUf9bTcWxSrh+yusEX8dbYiDW3GAwHm2DvDHiLGeNjuBY5fWy3X0uHMKVhGK4aS0ZIMPIv/dW2PXW54wngm4lbMW4HqXJ3IP9znzcY364DtXd5g0EJ4K4eb9VFG6NAURfd4QU1T7dwmoV9aMdCvsoZu1w+JgPzcZ7lrbpo14zEuugbYLZlVWY+FgKMHCCxsA7iS00cHrVg+IP57kpHrMcUXsxnw0zh8m7cF4+YoYd7dSfUjWEi8Ob2LQeTZ6fVz0BBZOUhjRA4a0wkUHmAwXUSRkzZx0ZL4WgiC3QR8ncrsb6U7dHnAlPhSUU12kXZSXr5K8kBtAGUhgPuJQdXG9DrynLoAM2RLGWArfyjamH9qiPO9zxLjwAVoLITTY2JKTvSVPZI5mKmtC099ICvh0zrHTZ279LWWNRfoQKvUpfUI2lRWuqQlzfwH3NJdsLZF2ySYk+4Lc2puION27JjbXlrvy+f//HaklSqZ00o2Un3ERskUI2d0vWpaqOcR8LI7WLXgkdQrEuP27wogjvbopkzFy4tLtAlwq5jb8sZCd3rFVeWNp8NXeKxqwHGpm0e1VoTHnY+4o97pB5GX2WgwrVjwRJPatFm6f2Vp0rN/UPnf8/EMk1ELmxXB2Jl3yzsK08orX3H9JDflkZl2pRYyDM9L/XglgfwjGjuI9MjewUVwXqJiO0gL2uLLGLtu607L9E59N3sAEfWxEQOIfird+tYVdibOsTJ7k6fj/ob8PjEIGmv/vTBU1nRZng8C0mRqDccDm7Zx3gxHB5U1RbjzqY5PA7PvYQfRHIerm8tV+NZ0Guu07brw0RorBpKsDnkTZqb4IEPK4RJ75ze3dx0+Dn5XA+bv/LTmxoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoa/4/4D98K9aR6hK2XAAAAAElFTkSuQmCC"
+            alt="1"
+          />
+          <img
+            src="https://d3fw5vlhllyvee.cloudfront.net/dist/header/ukraine_support.7ad2b5d444bc427dbc5d.png"
+            alt=""
+          />
+        </div>
+        <div class="nav">
+          <div>
+            <ul>
+              <li><a href="homePage.html">Find Jobs</a></li>
+              <li><a href="reviews.html">Company reviews</a></li>
+              <li><a href="salaryGuide.html">Salary Guide</a></li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li>
+                <span
+                  class="material-symbols-outlined"
+                  onclick="location.href='message.html'"
+                >
+                  mode_comment
+                </span>
+              </li>
+              <li>
+                <span
+                  class="material-symbols-outlined"
+                  onclick="location.href='notifi.html'"
+                >
+                  notifications
+                </span>
+              </li>
+              <li>
+                <div class="dropdown">
+                  <button
+                    onclick="myFunction()"
+                    class="dropbtn material-symbols-outlined"
+                  >
+                    person
+                  </button>
+                  <div id="myDropdown" class="dropdown-content">
+                    <a href="wishlist.html">My Jobs</a>
+                    <a href="index.html">Sign Out</a>
+                  </div>
+                </div>
+              </li>
+              <li class="li">|</li>
+              <li class="employ"><a href="">Employers/Post job</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <hr />
+     
+<div id ="box">
+    <img src="https://d3hbwax96mbv6t.cloudfront.net/title-webapp/_next/static/images/salaries-8d20dc14bdeae8889387e0fb40e0d546.png" alt="img">
+    <div id = "innerBox">
+        <h1>Find a career you'll love</h1>
+        <p>Explore which careers have the highest job satisfaction, best salaries, and more</p>
+        <div id = "parent">
+            <label for="">What</label><br>
+            <input id = "job" type="text" placeholder="job title"/>
+            <label for="">Where</label><br>
+            <input id = "place" type="text" placeholder="India"/>
+            <button type = "submit">Search</button>
+        </div>
+    </div>
+</div>
+<div id = "body">
+    <h1>Browse top paying jobs by industry</h1>
+    <div id = "select">
+            
+            <select name="industry" id="industry">
+              <option value="">Choose an Industry</option>
+              <option value="">Chemical Engineering</option>
+              <option value="">All Indstries</option>
+              <option value="">Food Industry</option>
+              <option value="">Information Technology</option>
+              <option value="">Business and Devlopment</option>
+            </select>
+            <br><br>
+          
+    </div>
+    <div id = "grid">
+        <div>
+            <h3><a href="https://in.indeed.com/career/elementary-school-teacher/salaries">Elementary School teacher</a></h3>
+            <p><a href="https://in.indeed.com/career/elementary-school-teacher/salaries">Average Salary : Rs 2,49,792/year</a></p>
+            <hr>
+            <a href="https://in.indeed.com/jobs?l&q=elementary%20school%20teacher&from=career&vjk=f7511c5ae94cfccd">Job Openings</a>
+        </div>
+        <div>
+            <h3><a href="https://in.indeed.com/career/human-resources-specialist/salaries">human resources specialist</a></h3>
+            <p><a href="https://in.indeed.com/career/human-resources-specialist/salaries">Average Salary : Rs 2,49,792/year</a></p>
+            <hr>
+            <a href="https://in.indeed.com/career/human-resources-specialist/salaries">Job Openings</a>
+        </div>
+        <div>
+            <h3><a href="https://in.indeed.com/career/accountant/salaries">Accountant</a></h3>
+            <p><a href="https://in.indeed.com/career/accountant/salaries">Average Salary : Rs 2,49,792/year</a></p>
+            <hr>
+            <a href="https://in.indeed.com/jobs?l&q=elementary%20school%20teacher&from=career&vjk=f7511c5ae94cfccd">Job Openings</a>
+        </div>
+        <div>
+            <h3><a href="https://in.indeed.com/career/customer-care-specialist/salaries">Customer Care Specialist </a></h3>
+            <p><a href="https://in.indeed.com/career/customer-care-specialist/salaries">Average Salary : Rs 2,49,792/year</a></p>
+            <hr>
+            <a href="https://in.indeed.com/jobs?l&q=elementary%20school%20teacher&from=career&vjk=f7511c5ae94cfccd">Job Openings</a>
+        </div>
+        <div>
+            <h3><a href="https://in.indeed.com/career/office-assistant/salaries">Office Assistant</a></h3>
+            <p><a href="https://in.indeed.com/career/office-assistant/salaries">Average Salary : Rs 2,49,792/year</a></p>
+            <hr>
+            <a href="https://in.indeed.com/jobs?l&q=elementary%20school%20teacher&from=career&vjk=f7511c5ae94cfccd">Job Openings</a>
+        </div>
+        <div>
+            <h3><a href="https://in.indeed.com/career/back-office-executive/salaries">Bank Officer</a></h3>
+            <p><a href="https://in.indeed.com/career/back-office-executive/salaries">Average Salary : Rs 2,49,792/year</a></p>
+            <hr>
+            <a href="https://in.indeed.com/jobs?l&q=elementary%20school%20teacher&from=career&vjk=f7511c5ae94cfccd">Job Openings</a>
+        </div>
+        <div>
+            <h3><a href="https://in.indeed.com/career/data-entry-clerk/salaries">Bank Data Clerk</a></h3>
+            <p><a href="https://in.indeed.com/career/data-entry-clerk/salaries">Average Salary : Rs 2,49,792/year</a></p>
+            <hr>
+            <a href="https://in.indeed.com/jobs?l&q=elementary%20school%20teacher&from=career&vjk=f7511c5ae94cfccd">Job Openings</a>
+        </div>
+        <div>
+            <h3><a href="https://in.indeed.com/career/graphic-designer/salaries">Graphic Designer</a></h3>
+            <p><a href="https://in.indeed.com/career/graphic-designer/salaries">Average Salary : Rs 2,49,792/year</a></p>
+            <hr>
+            <a href="https://in.indeed.com/jobs?l&q=elementary%20school%20teacher&from=career&vjk=f7511c5ae94cfccd">Job Openings</a>
+        </div>
+    </div>
+</div>
+<div id = "body2">
+    <h1>Browse top paying companies by industry</h1>
+    <div id = "select">
+            
+            <select name="industry" id="industry">
+              <option value="">Choose an Industry</option>
+              <option value="">Chemical Engineering</option>
+              <option value="">All Indstries</option>
+              <option value="">Food Industry</option>
+              <option value="">Information Technology</option>
+              <option value="">Business and Devlopment</option>
+            </select>
+            <br><br>
+          
+    </div>
+<div id = "grid2">
+    <div>
+        <div>
+            <img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/128x128/064eff7aab72cb84fbb7f92b82f6ac4a" alt="Capgemini logo">
+            
+        </div>
+        <div>
+            <h3>Capgemini</h3>
+            <p>8.8k reviews</p>
+        </div>
+    </div>
+    <div>
+        <div>
+            <img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/128x128/13b693b4dcc055d2344351b4c9a148e9">
+        </div>
+        <div>
+            <h3>Tata Consultancty Service</h3>
+            <p>8.8k reviews</p>
+        </div>
+    </div>
+    <div>
+        <div>
+            <img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/128x128/fff3cc32d7e908a657ea1da5a4a1732b">
+        </div>
+        <div>
+            <h3>Accenture</h3>
+            <p>8.8k reviews</p>
+        </div>
+    </div>
+    <div>
+        <div>
+            <img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/128x128/ce43c82fedc38bf5739f8c90376c3b98">
+        </div>
+        <div>
+            <h3>Cognizant technology</h3>
+            <p>8.8k reviews</p>
+        </div>
+    </div>
+    <div>
+        <div>
+            <img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/128x128/5335229f1b22e90f1e5eafb892704339">
+        </div>
+        <div>
+            <h3>Indigo Airlines</h3>
+            <p>8.8k reviews</p>
+        </div>
+    </div>
+    <div>
+        <div>
+            <img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/128x128/e33d1816f29251d95814fd99eae809df">
+        </div>
+        <div>
+            <h3>IBM</h3>
+            <p>8.8k reviews</p>
+        </div>
+    </div>
+    <div>
+        <div>
+            <img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/128x128/3e9d43f5c277de169808abdcaf49ba2c">
+        </div>
+        <div>
+            <h3><Amazon></Amazon></h3>
+            <p>8.8k reviews</p>
+        </div>
+    </div>
+    <div>
+        <div>
+            <img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/128x128/349d1c5aed5c3943dadc47139a21b79d">
+        </div>
+        <div>
+            <h3>Byjus's</h3>
+            <p>8.8k reviews</p>
+        </div>
+    </div>
+    </div>
+    <br>
+    <div id = "box2">
+        <div>
+            <h1>How much should you be earning?</h1>
+            <p>Get an estimated calculation of how much you should be earning and insight into,<br> your career options.</p>
+            <button><a href="https://in.indeed.com/career/salary-calculator/details/step1?context=desktop-careerpages-career-salaries-landing-button&pageSource=career-salaries-landing&noRedirect=">Get estimated pay range</a></button>
+        </div>
+        <div>
+            <img src="https://d3fw5vlhllyvee.cloudfront.net/mosaic-provider-salary-calculator-entries/dist/images/src/components/ResponsiveDefaultEntry/chart_desktop_janish-36baaa.svg" >
+        </div>
+    </div>
+    <br>
+    <div id = "box3">
+        <div>
+            <h1>Was this page helpful ?</h1>
+        </div>
+        <div class = "emoji">
+            <i class="fa-solid fa-face-angry"></i>
+            <i class="fa-solid fa-face-frown"></i>
+            <i class="fa-solid fa-face-meh"></i>
+            <i class="fa-solid fa-face-grin"></i>
+            <i class="fa-solid fa-face-grin-beam"></i>
+
+        </div>
+    </div>
+    <div id = footer>
+        <div>
+            <h2>Frequently searched Careers</h2>
+        </div>
+        <div>
+            <ul>
+                <li>Security Guard</li><br>
+                <li>Accountant</li><br>
+                <li>Data Entry Clerk</li><br>
+                <li>Teacher</li><br>
+                <li>Nurse</li><br>
+                <li>Driver</li><br>
+                <li>Laboratory Tehnician</li><br>
+                <li>Computer Operator</li><br>
+                <li>Pharmacist</li><br>
+                <li>Architect</li><br>
+                <li>Mechanichal Engineer</li><br>
+                <li>Civil Engineer</li><br>
+                <li>Graphic Designer</li><br>
+                <li>High School Teacher</li><br>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>Assistant Professor</li><br>
+                <li>Engineer</li><br>
+                <li>Full Stack Devoloper</li><br>
+                <li>Back Office Executive</li><br>
+                <li>Physiotherapist</li><br>
+                <li>Radiologist</li><br>
+                <li>Electrician</li><br>
+                <li>Computer Engineer</li><br>
+                <li>Electrical Engineer</li><br>
+                <li>Medical Representativ</li><br>
+                <li>Data Scientist</li><br>
+                <li>Web Developer</li><br>
+                <li>Veterinarian</li><br>
+                <li>Flight Attendant</li><br>
+                <li>CNC Operator</li><br>
+            </ul>
+
+        </div>
+        <div>
+            <ul>
+                <li>Security Guard</li><br>
+                <li>Accountant</li><br>
+                <li>Data Entry Clerk</li><br>
+                <li>Teacher</li><br>
+                <li>Nurse</li><br>
+                <li>Driver</li><br>
+                <li>Laboratory Tehnician</li><br>
+                <li>Computer Operator</li><br>
+                <li>Pharmacist</li><br>
+                <li>Architect</li><br>
+                <li>Mechanichal Engineer</li><br>
+                <li>Civil Engineer</li><br>
+                <li>Graphic Designer</li><br>
+                <li>High School Teacher</li><br>
+            </ul>
+        </div>
+    </div>
+    <div id = footer2>
+        <div>
+            <img src="data:image/svg+xml,%3Csvg%20width='157'%20height='42'%20viewBox='0%200%20157%2042'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3E%3Cmask%20id='mask0'%20mask-type='alpha'%20maskUnits='userSpaceOnUse'%20x='0'%20y='0'%20width='157'%20height='42'%3E%3Cpath%20d='M20.954%2020.5568V37.1099C20.954%2038.5379%2020.615%2039.5695%2019.9586%2040.2656C19.2884%2040.9654%2018.346%2041.3453%2017.3726%2041.308C16.4065%2041.3365%2015.4762%2040.9452%2014.8263%2040.2371C14.1735%2039.541%2013.8308%2038.495%2013.8308%2037.1028V22.0347C14.278%2022.0739%2014.7036%2022.0918%2015.1473%2022.0918C17.1865%2022.1013%2019.1912%2021.5714%2020.954%2020.5568ZM152.94%206.21197L153.129%206.21688C153.994%206.16916%20154.835%206.5086%20155.419%207.14146H155.405C155.931%207.75546%20156.209%208.65505%20156.209%209.82238V37.6847C156.209%2038.8948%20155.91%2039.7944%20155.34%2040.4084C154.746%2040.9915%20153.942%2041.3154%20153.106%2041.308C152.27%2041.3006%20151.472%2040.9626%20150.889%2040.3692C150.316%2039.7337%20150.02%2038.852%20150.02%2037.6847V37.0671C149.242%2037.9531%20148.367%2038.7516%20147.412%2039.4482C146.561%2040.0446%20145.625%2040.5126%20144.635%2040.8368C144.233%2040.9642%20143.822%2041.0608%20143.405%2041.126C142.735%2041.2525%20142.053%2041.3135%20141.371%2041.3084C139.873%2041.3173%20138.393%2040.9889%20137.043%2040.3477C135.696%2039.694%20134.509%2038.7571%20133.566%2037.6026C132.568%2036.3621%20131.819%2034.9445%20131.359%2033.4259C130.84%2031.7379%20130.584%2029.9818%20130.598%2028.2176C130.578%2024.2694%20131.575%2021.1898%20133.588%2018.9789C135.6%2016.768%20138.228%2015.6626%20141.472%2015.6626C142.123%2015.6595%20142.774%2015.7%20143.42%2015.7839C144.397%2015.9101%20145.349%2016.1872%20146.24%2016.605C147.672%2017.3311%20148.958%2018.3098%20150.034%2019.493V10.1508C150.034%208.85853%20150.308%207.87684%20150.839%207.22356C151.391%206.53911%20152.245%206.16356%20153.129%206.21688L152.94%206.21197ZM72.947%206.21185L73.1358%206.21688C73.9933%206.17567%2074.8248%206.51455%2075.4044%207.14146C75.9382%207.75546%2076.1907%208.65505%2076.1907%209.82238V37.6847C76.1907%2038.8948%2075.9165%2039.7944%2075.3467%2040.4084C74.7569%2040.9913%2073.9555%2041.3154%2073.1221%2041.3082C72.2887%2041.3007%2071.4932%2040.9624%2070.9141%2040.3692C70.3442%2039.7337%2070.0448%2038.852%2070.0448%2037.6847V37.0671C69.2622%2037.9489%2068.3882%2038.7469%2067.4372%2039.4482C66.5873%2040.0445%2065.6526%2040.5125%2064.6636%2040.8368C64.2616%2040.9638%2063.8505%2041.0605%2063.4338%2041.126C62.7619%2041.2504%2062.0795%2041.3114%2061.396%2041.3082C59.8984%2041.3169%2058.4184%2040.9885%2057.0679%2040.3477C55.722%2039.694%2054.5366%2038.7571%2053.5947%2037.6026C52.5902%2036.3633%2051.8337%2034.9457%2051.3657%2033.4259C50.8559%2031.736%2050.5995%2029.9812%2050.6046%2028.2176C50.6046%2024.2658%2051.6038%2021.1886%2053.5947%2018.9789C55.5856%2016.7692%2058.2329%2015.6626%2061.4789%2015.6626C62.1314%2015.6594%2062.7833%2015.6999%2063.4301%2015.7839C64.4061%2015.9132%2065.3561%2016.1901%2066.247%2016.605C67.6793%2017.3302%2068.9653%2018.309%2070.0412%2019.493V10.1508C70.0412%208.85853%2070.2973%207.87684%2070.8455%207.22356C71.3976%206.53862%2072.2522%206.16295%2073.1358%206.21688L72.947%206.21185ZM28.3298%2015.6197C28.8721%2015.6079%2029.4073%2015.7437%2029.877%2016.0124C30.362%2016.2879%2030.7526%2016.7006%2030.9987%2017.1976C31.2859%2017.7917%2031.4245%2018.4456%2031.4027%2019.1039V19.8821C32.4101%2018.5467%2033.697%2017.4423%2035.1753%2016.6443C36.6493%2015.9432%2038.2684%2015.5923%2039.9036%2015.6197C41.5099%2015.5897%2043.0981%2015.9578%2044.5238%2016.6907C45.8376%2017.3695%2046.8987%2018.4448%2047.5535%2019.7607C47.9962%2020.5394%2048.284%2021.395%2048.401%2022.281C48.5159%2023.1883%2048.5797%2024.1012%2048.5923%2025.0152L48.5922%2037.4419C48.5922%2038.7128%2048.2748%2039.6731%2047.6797%2040.2978C47.0889%2040.9513%2046.2352%2041.311%2045.3498%2041.2795C44.4471%2041.3124%2043.5767%2040.9446%2042.9766%2040.2764C42.3598%2039.6195%2042.0641%2038.6592%2042.0641%2037.4205V26.9467C42.0641%2024.8619%2041.7671%2023.2651%2041.1732%2022.156C40.5817%2021.0494%2039.3699%2020.4961%2037.5918%2020.4961C36.452%2020.4959%2035.3403%2020.8465%2034.4106%2021.4992C33.4351%2022.1948%2032.6956%2023.167%2032.2899%2024.2872C31.9761%2025.2296%2031.8246%2026.9681%2031.8246%2029.5741V37.4598C31.8246%2038.7485%2031.5109%2039.6909%2030.8941%2040.3477C30.2781%2040.9889%2029.4143%2041.3384%2028.5209%2041.308C27.6305%2041.3367%2026.774%2040.9686%2026.1874%2040.3049C25.5742%2039.6481%2025.2749%2038.6878%2025.2749%2037.4491V19.2038C25.2749%2017.9972%2025.5526%2017.0976%2026.1044%2016.5229C26.6731%2015.9086%2027.489%2015.5775%2028.3298%2015.6197ZM91.3893%2015.5733C93.9284%2015.5733%2096.1321%2016.0874%2097.9607%2017.1298C99.6795%2018.0755%20101.101%2019.4727%20102.069%2021.1672C102.939%2022.7117%20103.399%2024.4499%20103.403%2026.2185C103.403%2027.7963%20102.938%2028.8423%20102.004%2029.3099C101.07%2029.7776%2099.7352%2030.0239%2098.0364%2030.0239H85.2363C85.2268%2031.3477%2085.5398%2032.6542%2086.1488%2033.8329C86.6725%2034.8434%2087.4723%2035.6881%2088.457%2036.271C89.2824%2036.7565%2090.2142%2037.037%2091.1729%2037.0885C91.3345%2037.1068%2091.4972%2037.114%2091.6598%2037.1099C92.3817%2037.1211%2093.1016%2037.0322%2093.7986%2036.8458C94.4652%2036.6668%2095.101%2036.39%2095.6849%2036.0247C96.2653%2035.6542%2096.8241%2035.2513%2097.3584%2034.8181C97.8705%2034.3862%2098.545%2033.7936%2099.3529%2033.0546C99.7721%2032.7584%20100.281%2032.6135%20100.796%2032.6441L100.778%2032.6263C101.369%2032.6064%20101.949%2032.7963%20102.411%2033.1617C102.831%2033.5436%20103.055%2034.0909%20103.025%2034.6539C102.975%2035.3668%20102.734%2036.0534%20102.325%2036.6423C101.773%2037.5052%20101.061%2038.2564%20100.226%2038.8556C99.1541%2039.6189%2097.9656%2040.2071%2096.7056%2040.5976C95.1308%2041.0865%2093.4866%2041.3203%2091.8365%2041.2902H91.1585C87.2825%2041.1736%2084.2444%2040.0193%2082.0443%2037.8275C79.7108%2035.5142%2078.5242%2032.4014%2078.5242%2028.4246C78.511%2026.6533%2078.805%2024.8928%2079.3934%2023.2198C79.9306%2021.6862%2080.7912%2020.2832%2081.9181%2019.1039C83.065%2017.9457%2084.4552%2017.0512%2085.9901%2016.4836C87.6524%2015.8847%2089.4074%2015.5766%2091.1765%2015.5733H91.3893ZM117.541%2015.5662C120.106%2015.5662%20122.284%2016.0802%20124.113%2017.1226C127.46%2018.9592%20129.555%2022.4309%20129.602%2026.2185C129.602%2027.7963%20129.115%2028.8423%20128.181%2029.3099C127.247%2029.7776%20125.913%2030.0239%20124.196%2030.0239H111.417C111.41%2031.3445%20111.714%2032.6486%20112.305%2033.8329C112.838%2034.845%20113.646%2035.6895%20114.638%2036.271C115.462%2036.756%20116.393%2037.0364%20117.35%2037.0885C117.512%2037.1068%20117.675%2037.114%20117.837%2037.1099C118.561%2037.1197%20119.284%2037.0308%20119.983%2036.8458C120.64%2036.6658%20121.267%2036.389%20121.841%2036.0247C122.429%2035.6541%20122.996%2035.2513%20123.539%2034.8181C124.048%2034.3826%20124.704%2033.7936%20125.53%2033.0546C125.943%2032.7621%20126.444%2032.6173%20126.951%2032.6441C127.543%2032.617%20128.124%2032.8077%20128.582%2033.1796L128.6%2033.1475C129.034%2033.5202%20129.27%2034.0712%20129.238%2034.6396C129.187%2035.3527%20128.944%2036.0393%20128.535%2036.628C127.979%2037.4852%20127.27%2038.2351%20126.443%2038.8413C125.37%2039.6032%20124.182%2040.1913%20122.923%2040.5834C121.345%2041.0706%20119.699%2041.3044%20118.046%2041.2759H117.368C113.491%2041.1545%20110.436%2040.005%20108.236%2037.8132C105.903%2035.5%20104.738%2032.3871%20104.738%2028.4103C104.725%2026.639%20105.019%2024.8785%20105.607%2023.2056C106.143%2021.6776%20106.992%2020.2762%20108.103%2019.0896C109.262%2017.9358%20110.658%2017.0422%20112.196%2016.4693C113.854%2015.8732%20115.604%2015.5676%20117.368%2015.5662H117.541ZM143.42%2020.3533H143.358C142.206%2020.3282%20141.076%2020.6726%20140.137%2021.335C139.151%2022.0515%20138.393%2023.0326%20137.952%2024.1623C137.4%2025.5154%20137.134%2026.9659%20137.169%2028.4246C137.127%2029.9273%20137.408%2031.4217%20137.995%2032.8083C138.472%2033.9071%20139.258%2034.8465%20140.26%2035.5142C141.198%2036.1062%20142.289%2036.4184%20143.402%2036.4138H143.42C144.527%2036.4235%20145.616%2036.1255%20146.561%2035.5535C147.558%2034.9086%20148.345%2033.9909%20148.826%2032.9118C149.399%2031.7231%20149.674%2030.2095%20149.674%2028.4246C149.716%2026.9325%20149.427%2025.4493%20148.826%2024.0802C148.333%2022.9676%20147.541%2022.0105%20146.536%2021.3136C145.619%2020.689%20144.532%2020.3542%20143.42%2020.3533ZM63.4301%2020.3533H63.3436C62.1979%2020.3287%2061.0752%2020.6733%2060.1444%2021.335C59.1517%2022.0493%2058.3868%2023.0305%2057.9408%2024.1623C57.4057%2025.5196%2057.1459%2026.9679%2057.1761%2028.4246C57.1356%2029.9272%2057.417%2031.4212%2058.0021%2032.8083C58.4739%2033.9109%2059.2628%2034.8519%2060.2707%2035.5142C61.2077%2036.1061%2062.297%2036.4184%2063.4085%2036.4138H63.4301C64.53%2036.4235%2065.6103%2036.1252%2066.5463%2035.5535C67.5566%2034.9172%2068.3527%2033.9976%2068.833%2032.9118C69.4354%2031.493%2069.7243%2029.963%2069.6806%2028.4246C69.7109%2026.9335%2069.422%2025.4529%2068.833%2024.0802C68.3409%2022.962%2067.541%2022.0033%2066.5247%2021.3136C65.6167%2020.6878%2064.5366%2020.3526%2063.4301%2020.3533ZM117.639%2019.981L117.368%2019.9856H117.329C115.822%2019.9311%20114.363%2020.5201%20113.325%2021.6027C112.265%2022.6879%20111.626%2024.2944%20111.417%2026.4362H123.283C123.132%2024.2658%20122.522%2022.6522%20121.48%2021.5813C120.397%2020.5008%20118.905%2019.9216%20117.368%2019.9856L117.639%2019.981ZM91.447%2019.9812L91.1765%2019.9856H91.1512C89.6441%2019.9306%2088.1858%2020.5197%2087.1478%2021.6027C86.1091%2022.6879%2085.4743%2024.2944%2085.2399%2026.4362H97.1095C96.94%2024.2658%2096.3449%2022.6522%2095.2881%2021.5813C94.2045%2020.502%2092.7125%2019.923%2091.1765%2019.9856L91.447%2019.9812ZM27.0782%202.67207C27.7996%203.30749%2028.5822%204.09999%2028.9032%205.04955C29.2855%206.2383%2027.5687%204.92461%2027.3343%204.76397C26.141%203.97732%2024.8515%203.34396%2023.4968%202.87911C16.0814%200.665838%209.06997%204.66401%204.69865%2010.8683C2.94357%2013.5959%201.6009%2016.5629%200.713249%2019.675C0.632235%2020.0581%200.50383%2020.4297%200.330938%2020.7817C0.139783%2021.1386%200.244378%2019.8428%200.244378%2019.8C0.403128%2018.4992%200.658696%2017.2117%201.009%2015.9482C3.02154%209.18695%207.4722%203.55381%2013.8741%200.97284C18.2815%20-0.562174%2023.3056%20-0.480069%2027.0782%202.67207ZM21.982%2010.7648C22.6308%2011.996%2022.7465%2013.4353%2022.3024%2014.7526C21.8583%2016.0699%2020.8926%2017.152%2019.6268%2017.7509C16.9977%2019.0616%2013.7924%2018.0511%2012.4134%2015.4769C11.7656%2014.2455%2011.6505%2012.8066%2012.0944%2011.4896C12.5384%2010.1727%2013.5034%209.09048%2014.7686%208.49084C17.3976%207.18018%2020.603%208.19064%2021.982%2010.7648Z'%20fill='white'/%3E%3C/mask%3E%3Cg%20mask='url(%23mask0)'%3E%3Cpath%20d='M156.209%200H0.21582V41.3105H156.209V0Z'%20fill='white'/%3E%3C/g%3E%3C/svg%3E%0A">
+        </div>
+        <div>
+            <h3>Explore Indeed</h3>
+            <ul>
+                <li><a href="https://in.indeed.com/career/salaries?from=gnav-title-webapp">Career Explorer</a></li><br>
+                <li><a href="https://in.indeed.com/career-advice?from=gnav-title-webapp&ikw=jsfooter&isid=jasx_us-en">Career Advice</a></li><br>
+                <li><a href="https://in.indeed.com/browsejobs?from=gnav-title-webapp">Browse Jobs</a></li><br>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://in.indeed.com/companies/browse-companies">Browse Companies</a></li><br>
+                <li><a href="https://in.indeed.com/career/salaries">Salaries</a></li><br>
+                <li><a href="https://www.indeedevents.com/en-in/?from=gnav-title-webapp">Indeed Events</a></li><br>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://www.indeed.jobs/?from=gnav-title-webapp">Work At Indeed</a></li><br>
+                <li><a href="https://in.indeed.com/worldwide?from=gnav-title-webapp">Contries</a></li><br>
+                <li><a href="https://in.indeed.com/about?from=gnav-title-webapp">About</a></li><br>
+            </ul>
+        </div>
+        <div>
+            <h3>Follow Us</h3>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </div>
+    </div>
+    <p class="foot">© 2021 Indeed-Accessibility at Indeed-Privacy Center-Cookies-Privacy</p>
+    <div id = "black">
+
+    </div>
+
+</body>
+</html>
+<script>
+      function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function (event) {
+    if (!event.target.matches(".dropbtn")) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains("show")) {
+          openDropdown.classList.remove("show");
+        }
+      }
+    }
+  };
+</script>

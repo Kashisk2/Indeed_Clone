@@ -7,15 +7,18 @@ function signUp() {
     var email = document.getElementById("email").value;
     var Password = document.getElementById("Password").value;
     console.log(name);
-
+    if(name==""||email==""||Password==""){
+        alert("Please enter details");
+    }else{
     var data = {
         Name: name,
         Email: email,
         Password: Password
     };
-
+    
     formData.push(data);
     localStorage.setItem("user", JSON.stringify(formData));
     alert("Sign Up successfull!");
+}
 }
 
