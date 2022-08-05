@@ -353,12 +353,12 @@ function setData(elm, i) {
   var button = document.createElement("button");
   button.innerText = "Apply Now";
   button.addEventListener("click", function () {
-    location = "login_page.html";
+    alert("Please signin first");
   });
   var button2 = document.createElement("button");
   button2.innerText = "Wishlist";
   button2.addEventListener("click", function () {
-    location = "login_page.html";
+    alert("Please signin first");
   });
 
   var detail = document.createElement("ul");
