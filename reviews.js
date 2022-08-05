@@ -12,8 +12,11 @@ var arr = [
     ],
     reviews: "3,197 reviews",
     sal: "Salaries",
-    ques: "Questions",
+    review: "Reviews",
     open_job: "Open jobs",
+    rev_link: "https://in.indeed.com/cmp/Alstom/reviews",
+    sal_link: "https://in.indeed.com/cmp/Alstom/salaries",
+    jobs: "https://in.indeed.com/cmp/Alstom/jobs"
   },
   {
     img_url:
@@ -28,8 +31,11 @@ var arr = [
     ],
     reviews: "8,584 reviews",
     sal: "Salaries",
-    ques: "Questions",
+    review: "Reviews",
     open_job: "Open jobs",
+    rev_link: "https://in.indeed.com/cmp/Amazon.com/reviews",
+    sal_link: "https://in.indeed.com/cmp/Amazon.com/salaries",
+    jobs: "https://in.indeed.com/cmp/Amazon.com/jobs"
   },
   {
     img_url:
@@ -44,8 +50,11 @@ var arr = [
     ],
     reviews: "7,052 reviews",
     sal: "Salaries",
-    ques: "Questions",
+    review: "Reviews",
     open_job: "Open jobs",
+    rev_link: "https://in.indeed.com/cmp/Hdfc-Bank/reviews",
+    sal_link: "https://in.indeed.com/cmp/Hdfc-Bank/salaries",
+    jobs: "https://in.indeed.com/cmp/Hdfc-Bank/jobs"
   },
   {
     img_url:
@@ -60,8 +69,11 @@ var arr = [
     ],
     reviews: "2,003 reviews",
     sal: "Salaries",
-    ques: "Questions",
+    review: "Reviews",
     open_job: "Open jobs",
+    rev_link: "https://in.indeed.com/cmp/Kotak-Mahindra-Bank/reviews",
+    sal_link: "https://in.indeed.com/cmp/Kotak-Mahindra-Bank/salaries",
+    jobs: "https://in.indeed.com/cmp/Kotak-Mahindra-Bank/jobs"
   },
   {
     img_url:
@@ -76,8 +88,11 @@ var arr = [
     ],
     reviews: "6,539 reviews",
     sal: "Salaries",
-    ques: "Questions",
+    review: "Reviews",
     open_job: "Open jobs",
+    rev_link: "https://in.indeed.com/cmp/Bosch/reviews",
+    sal_link: "https://in.indeed.com/cmp/Bosch/salaries",
+    jobs: "https://in.indeed.com/cmp/Bosch/jobs"
   },
   {
     img_url:
@@ -92,8 +107,11 @@ var arr = [
     ],
     reviews: "335 reviews",
     sal: "Salaries",
-    ques: "Questions",
+    review: "Reviews",
     open_job: "Open jobs",
+    rev_link: "https://in.indeed.com/cmp/Ride.swiggy/reviews",
+    sal_link: "https://in.indeed.com/cmp/Ride.swiggy/salaries",
+    jobs: "https://in.indeed.com/cmp/Ride.swiggy/jobs"
   },
   {
     img_url:
@@ -108,8 +126,11 @@ var arr = [
     ],
     reviews: "371 reviews",
     sal: "Salaries",
-    ques: "Questions",
+    review: "Reviews",
     open_job: "Open jobs",
+    rev_link: "https://in.indeed.com/cmp/Adani-Group/reviews",
+    sal_link: "https://in.indeed.com/cmp/Adani-Group/salaries",
+    jobs: "https://in.indeed.com/cmp/Adani-Group/jobs"
   },
   {
     img_url:
@@ -124,8 +145,11 @@ var arr = [
     ],
     reviews: "2,027 reviews",
     sal: "Salaries",
-    ques: "Questions",
+    review: "Reviews",
     open_job: "Open jobs",
+    rev_link: "https://in.indeed.com/cmp/Syntel/reviews",
+    sal_link: "https://in.indeed.com/cmp/Syntel/salaries",
+    jobs: "https://in.indeed.com/cmp/Syntel/jobs"
   },
   {
     img_url:
@@ -140,8 +164,11 @@ var arr = [
     ],
     reviews: "7,369 reviews",
     sal: "Salaries",
-    ques: "Questions",
+    review: "Reviews",
     open_job: "Open jobs",
+    rev_link: "https://in.indeed.com/cmp/Kpmg-0828bc85/reviews",
+    sal_link: "https://in.indeed.com/cmp/Kpmg-0828bc85/salaries",
+    jobs: "https://in.indeed.com/cmp/Kpmg-0828bc85/jobs"
   },
 ];
 display();
@@ -177,21 +204,25 @@ function display() {
     var star5 = document.createElement("img");
     star5.setAttribute("src", ele.star_img[4]);
     star5.setAttribute("alt", index);
-    var review = document.createElement("a");
-    review.setAttribute("href", "");
-    review.innerText = ele.reviews;
+    var reviews = document.createElement("a");
+    reviews.setAttribute("href", ele.rev_link);
+    reviews.setAttribute("target","_blank");
+    reviews.innerText = ele.reviews;
     var salary = document.createElement("a");
-    salary.setAttribute("href", "");
+    salary.setAttribute("href", ele.sal_link);
+    salary.setAttribute("target","_blank");
     salary.innerText = ele.sal;
-    var question = document.createElement("a");
-    question.setAttribute("href", "");
-    question.innerText = ele.ques;
+    var review = document.createElement("a");
+    review.setAttribute("href", ele.rev_link);
+    review.setAttribute("target","_blank");
+    review.innerText = ele.review;
     var open_job = document.createElement("a");
-    open_job.setAttribute("href", "");
+    open_job.setAttribute("href", ele.jobs);
+    open_job.setAttribute("target","_blank");
     open_job.innerText = ele.open_job;
     img_box.append(image);
-    link_separator.append(salary, question, open_job);
-    name_rev_box.append(name, star1, star2, star3, star4, star5, review);
+    link_separator.append(salary,open_job,review);
+    name_rev_box.append(name, star1, star2, star3, star4, star5, reviews);
     separator.append(img_box, name_rev_box);
     box.append(separator, link_separator);
     document.getElementById("companies-box").append(box);

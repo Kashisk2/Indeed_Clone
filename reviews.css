@@ -66,6 +66,10 @@ display: flex;
 align-items: center;
 /* justify-content: space-between; */
 }
+.separator a{
+    text-decoration: none;
+    color: black;
+}
 #box a{
 text-decoration: none;
 color: hsl(208, 69%, 46%);
@@ -77,7 +81,6 @@ color: hsl(208, 69%, 46%);
 }
 #box:hover{
     background-color: #f5fbf9;
-    cursor: pointer;
     border-radius: 10px;
 }
 #img-box{
