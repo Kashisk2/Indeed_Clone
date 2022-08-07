@@ -217,21 +217,30 @@ var output2 = document.getElementById("place").value;
 function findData() {
   var output1 = document.getElementById("jobtitle").value;
   var output2 = document.getElementById("place").value;
+  var flag = 0;
   if (output1 == "" && output2 == "") {
-    alert("Enter something");
+    flag = 1;
+  }
+  if (flag == 1) {
+    alert("please enter something");
   } else {
     document.getElementById("firstdiv").innerText = "";
 
     var ans = jobData.filter(function (elm, i) {
       return (
-        output1 == elm.post ||
-        output1 == elm.companyName ||
-        output2 == elm.place
+        output1.toLowerCase() == elm.post.toLowerCase() ||
+        output1.toLowerCase() == elm.companyName.toLowerCase() ||
+        output2.toLowerCase() == elm.place.toLowerCase()
       );
     });
-    showData(ans);
-    localStorage.setItem("searchItem", JSON.stringify(output1));
-    localStorage.setItem("searchItem2", JSON.stringify(output2));
+    if (ans.length == 0) {
+      alert("No Match Found");
+      location = "homePage.html";
+    } else {
+      showData(ans);
+      localStorage.setItem("searchItem", JSON.stringify(output1));
+      localStorage.setItem("searchItem2", JSON.stringify(output2));
+    }
   }
 }
 document.getElementById("find").addEventListener("click", findData2);
@@ -242,15 +251,13 @@ function findData2() {
   //  document.getElementById("mainData").innerText="";
   var output1 = document.getElementById("jobtitle").value;
   var output2 = document.getElementById("place").value;
-  if (output1 == "" && output2 == "") {
-    alert("Enter something");
-  } else {
+   
     //   document.getElementById("firstdiv").innerText = "";
     allData1.push(output1);
     allData1.push(output2);
     localStorage.setItem("search", JSON.stringify(allData1));
   }
-}
+
 
 function showData(jobData) {
   jobData.map(function (elm, i) {

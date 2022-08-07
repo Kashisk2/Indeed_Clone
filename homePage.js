@@ -393,8 +393,12 @@ var output2 = document.getElementById("place").value;
 function findData() {
   var output1 = document.getElementById("jobtitle").value;
   var output2 = document.getElementById("place").value;
+  var flag = 0;
   if (output1 == "" && output2 == "") {
-    alert("Enter something");
+    flag = 1;
+  }
+  if (flag == 1) {
+    alert("please enter something");
   } else {
     document.getElementById("firstdiv").innerText = "";
 
@@ -423,15 +427,13 @@ function findData2() {
   //  document.getElementById("mainData").innerText="";
   var output1 = document.getElementById("jobtitle").value;
   var output2 = document.getElementById("place").value;
-  if (output1 == "" && output2 == "") {
-    alert("Enter something");
-  } else {
+ 
     //   document.getElementById("firstdiv").innerText = "";
     allData1.push(output1);
     allData1.push(output2);
     localStorage.setItem("search", JSON.stringify(allData1));
   }
-}
+
 
 var elem = JSON.parse(localStorage.getItem("getData")) || [];
 
