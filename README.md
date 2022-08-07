@@ -4,8 +4,8 @@ We are team of five people we have made clone of Indeed job website in which we 
 
 
 ![Screenshot (3)](https://user-images.githubusercontent.com/107412119/183297678-325efacc-68ad-49c5-bcdf-06463bc025de.png)
-This is our landing page in this page we have added functionality of searching so in which user can find company by the company name ,company location,job role etc.
-If by searching data is not found then it will show no match found and if user don't write anything in input then site give alert of "please enter something. 
+This is our landing page in this page we have added functionality of searching so in which user can find company by the company name ,company location,job role etc.<br/>
+If by searching data is not found then it will show no match found and if user don't write anything in input then site give alert of "please enter something. <br/>
 After that in company data whichever company you click on it will show you details of that company beside the all company data. in which user click on the apply site will give alert "please login first".
 so user have to login/signin first that option user can find in footer.
 
@@ -13,5 +13,6 @@ so user have to login/signin first that option user can find in footer.
 
 ![Screenshot (4)](https://user-images.githubusercontent.com/107412119/183298360-a57e442f-408a-43de-acb8-d1f12ba85546.png)
 
-```This is our S```
-```JSNNKNKNSKN``
+This is ouR <br/>
+kash
+
