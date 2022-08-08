@@ -14,7 +14,7 @@ so user have to login/signin first that option user can find in footer.
 ![Screenshot (4)](https://user-images.githubusercontent.com/107412119/183298360-a57e442f-408a-43de-acb8-d1f12ba85546.png)
 
 This is our Sign in  page in which if user have already account then they can direct sign in but if don't have account then they can creat new account by click on signup now<br/>
-# Signuop_Page
+# Signup_Page
 ![Screenshot (5)](https://user-images.githubusercontent.com/107412119/183299867-0711649f-5847-461b-bd6c-2a1b9ca17ef4.png)
 
 This is our signup page in which user can make new account if user already exist then it will give alert "user alredy exist" if user is new then they can make new account and then direct  they can login.After they login they will landed to the Home page.
