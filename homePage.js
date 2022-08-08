@@ -523,6 +523,8 @@ function sendData(elm, i) {
   });
   if (ans === -1) {
     arrData.push(jobData[i]);
+  }else{
+    alert("Already Applied");
   }
   //    console.log(arrData);
 
@@ -535,6 +537,9 @@ function sendData2(elm, i) {
   });
   if (ans === -1) {
     arrData2.push(jobData[i]);
+  }
+  else{
+    alert("Already in wishlist")
   }
   //    console.log(arrData);
 
